@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · Honda e Dashboard</title>
+<meta name="description" content="Privacy policy for the Honda e Dashboard Android app.">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="img/app-icon-512x512.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="./"><img src="img/app-icon-512x512.png" alt="">Honda e Dashboard</a>
+    <nav><a href="./#features">Features</a><a href="changelog.html">Changelog</a><a href="privacy.html">Privacy</a></nav>
+  </header>
+
+  <main class="doc">
+    <h1>Privacy Policy</h1>
+    <p class="meta">Honda e Dashboard (Android, package <code>dev.moped.hondae</code>) · Effective 1 October 2026</p>
+
+    <div class="summary">
+      <ul>
+        <li>No account, no ads, no analytics, no crash reporting, no tracking.</li>
+        <li>The developer does not collect, receive or store any of your data. There is no developer server.</li>
+        <li>Everything the app reads and records stays on your phone, in storage you control.</li>
+        <li>The only data that leaves the phone is optional ABRP telemetry, sent only if you switch it on with your own ABRP token, or files you choose to share yourself.</li>
+      </ul>
+    </div>
+
+    <h2>Who we are</h2>
+    <p>Honda e Dashboard is an independent app made by a single developer. It is not affiliated with, endorsed by or connected to Honda Motor Co., Ltd. Questions about this policy: <a href="mailto:moped@jepan.sk">moped@jepan.sk</a>.</p>
+
+    <h2>What the app reads and why</h2>
+    <table>
+      <thead><tr><th>Data</th><th>Why</th><th>Where it goes</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Vehicle data</strong> from your OBD-II adapter: battery state of charge and health, cell voltages, power, voltage, current, temperatures, speed, odometer, charging state, and, on the vehicle identity page, the VIN and part and software numbers.</td>
+          <td>To show the dashboard, battery, charging and drive screens, widgets and the Android Auto display, and to record charging sessions and drives.</td>
+          <td>Shown on the phone and car screen. Saved only in your log files on the phone. Sent to ABRP only if you enable it (see below).</td>
+        </tr>
+        <tr>
+          <td><strong>Precise location</strong>, including in the background while the app's connection to the car is running.</td>
+          <td>To record the route of each drive in its GPX log, to work out speed and road gradient for the app's on-device driving-load and tyre estimates, and to send your position to ABRP if you enable it. Background access is needed because the app keeps logging when the screen is off or another app, such as navigation, is in front.</td>
+          <td>Saved only in your drive logs on the phone. Sent to ABRP only if you enable it. The derived driving-load figures are kept in the app's settings. Location is only requested while the app's car connection service is running, never otherwise.</td>
+        </tr>
+        <tr>
+          <td><strong>Nearby Bluetooth devices</strong></td>
+          <td>To find and connect to your OBD-II adapter, and to start automatically when the phone joins the car's Bluetooth.</td>
+          <td>The chosen adapter's address is stored in the app's settings on the phone. Nothing else is kept.</td>
+        </tr>
+        <tr>
+          <td><strong>Notifications</strong></td>
+          <td>To show the ongoing notification Android requires while the app is connected to the car.</td>
+          <td>Not stored.</td>
+        </tr>
+        <tr>
+          <td><strong>Your settings</strong>: units, dashboard layouts, adapter choice, ABRP token and key, and similar.</td>
+          <td>To remember how you set the app up.</td>
+          <td>Stored in the app's private storage on the phone.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Where your data is stored</h2>
+    <p>While a drive or charge is being recorded, its file is kept in the app's private storage. When it is finished, it is moved to a folder you choose in <em>Settings → File storage</em>. Drives are GPX files; charging sessions are CSV files. You can open, move or delete these files at any time, inside the app or with any file manager.</p>
+    <p>Settings backups are only created when you export them yourself, to a file and location you pick.</p>
+    <p>If Android's own backup is turned on for your Google account, Android may include the app's settings in that backup, as it does for most apps. That backup is handled by Google under your account's settings, not by the developer, and you can turn it off in Android's settings.</p>
+
+    <h2>A Better Route Planner (ABRP) telemetry — optional, off by default</h2>
+    <p>If you turn on ABRP telemetry and enter your own ABRP token, the app sends live data to ABRP's service (<code>api.iternio.com</code>) over an encrypted HTTPS connection, about every 5 seconds while connected to the car. This lets ABRP plan routes from the real state of your battery.</p>
+    <p>What is sent: state of charge and health, power, speed, location (latitude, longitude, heading, elevation), charging or driving state, pack voltage and current, battery and outside temperature, odometer, battery capacity, and a timestamp. Your ABRP token identifies your ABRP vehicle.</p>
+    <p>Once received, this data is governed by ABRP's own privacy policy, available on <a href="https://abetterrouteplanner.com" rel="noopener">abetterrouteplanner.com</a>. Switch the feature off in the app's settings to stop sending immediately.</p>
+
+    <h2>Sharing</h2>
+    <p>The app does not share, sell or transfer your data to anyone. A log file only leaves your phone when you tap <em>Share</em> and pick where it goes using Android's share sheet; what happens then depends on the app you choose.</p>
+
+    <h2>Android Auto</h2>
+    <p>When your phone is connected to Android Auto, the app shows its values on the car's screen. This display goes from your phone to your car only.</p>
+
+    <h2>Retention and deletion</h2>
+    <p>Data stays on your phone until you delete it. Delete individual drives or charges in the app, delete the files from your chosen folder, or clear the app's storage. Uninstalling the app removes its private storage and settings; files in the folder you chose stay there until you delete them. Since the developer holds no data about you, there is nothing to request or delete on our side.</p>
+
+    <h2>Security</h2>
+    <p>Data in the app's private storage is protected by Android's app sandbox. The ABRP connection uses HTTPS. The app only reads from the car; it never writes to it or changes any of its settings.</p>
+
+    <h2>Children</h2>
+    <p>The app is meant for drivers of a Honda e and is not directed at children. It does not knowingly collect any data from anyone, children included.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If the app's handling of data changes, this page will be updated and the effective date above changed before the new version of the app is released.</p>
+
+    <h2>Contact</h2>
+    <p><a href="mailto:moped@jepan.sk">moped@jepan.sk</a></p>
+  </main>
+
+  <footer>
+    <p>Honda e Dashboard is an independent app, not affiliated with Honda Motor Co., Ltd.</p>
+    <p><a href="./">Home</a></p>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Honda e Dashboard</title>
+<meta name="description" content="Live Honda e battery, power and charging data from a Bluetooth OBD adapter.">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="img/app-icon-512x512.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="./"><img src="img/app-icon-512x512.png" alt="">Honda e Dashboard</a>
+    <nav><a href="#features">Features</a><a href="changelog.html">Changelog</a><a href="privacy.html">Privacy</a></nav>
+  </header>
+
+  <section class="hero">
+    <img src="img/hero-2048x1000.png" width="2048" height="1000"
+         alt="Honda e Dashboard: live power, battery and charging from your OBD adapter">
+  </section>
+
+  <p class="lede">Honda e Dashboard reads your Honda e's traction battery through a Bluetooth OBD-II adapter and shows what the car's own screen doesn't: live power, the real state of the pack, and every charge as a curve.<a class="note-ref" href="#note-charging">*</a></p>
+
+  <main class="features" id="features">
+    <section class="feature">
+      <div class="shot"><img src="img/01-dashboard.png" width="1080" height="2160" loading="lazy" alt="Dashboard with power, load per minute, charge, range, consumption, health, outside temperature and 12 V tiles"></div>
+      <div>
+        <div class="eyebrow">Live dashboard</div>
+        <h2>Everything the car knows, on one screen</h2>
+        <p>Power with draw and regeneration, state of charge, state of health, pack voltage and current, temperatures, the 12&nbsp;V battery, odometer and consumption.</p>
+        <p>Rearrange, add and remove tiles to build your own layout. The car is drawn in your paint colour,<a class="note-ref" href="#note-model">**</a> and home-screen widgets and Android Auto show the key values too.</p>
+      </div>
+    </section>
+
+    <section class="feature">
+      <div class="shot"><img src="img/02-battery.png" width="1080" height="2160" loading="lazy" alt="Battery page with all 96 cell voltages and module temperatures"></div>
+      <div>
+        <div class="eyebrow">Battery</div>
+        <h2>All 96 cells, at a glance</h2>
+        <p>Every cell voltage on one page, with the weakest and strongest cells and the module temperatures.</p>
+        <p>A cell that starts drifting away from the rest is flagged early, long before it shows up as lost range.</p>
+      </div>
+    </section>
+
+    <section class="feature">
+      <div class="shot"><img src="img/03-charging-live.png" width="1080" height="2160" loading="lazy" alt="Live charging session with state of charge and power curves"></div>
+      <div>
+        <div class="eyebrow">Charging</div>
+        <h2>Every charge, drawn like a charger draws it<a class="note-ref" href="#note-charging">*</a></h2>
+        <p>State of charge and power against time, energy added, peak and average power, live while you charge.</p>
+        <p>Each session is saved as a CSV file you can share or open anywhere else.</p>
+      </div>
+    </section>
+
+    <section class="feature">
+      <div class="shot"><img src="img/04-charging-history.png" width="1080" height="2160" loading="lazy" alt="Last charge with its power curve and the list of saved charges"></div>
+      <div>
+        <div class="eyebrow">Charging history</div>
+        <h2>Every charge kept, even the ones the adapter slept through</h2>
+        <p>The last charge stays on screen with its curve, duration, peak and energy, and every session is saved to share or delete.</p>
+        <p>Unplugged while the adapter was asleep? The next time you start the car, the app asks whether to finish that session with what your charger reported, or discard it. The missing part is drawn as an estimate.<a class="note-ref" href="#note-charging">*</a></p>
+      </div>
+    </section>
+
+    <section class="feature">
+      <div class="shot"><img src="img/05-drive-log.png" width="1080" height="2160" loading="lazy" alt="Drive log listing drives with distance, average speed, consumption and regeneration"></div>
+      <div>
+        <div class="eyebrow">Drives</div>
+        <h2>Drive logs you own</h2>
+        <p>Every drive saved as a GPX file with speed, power and battery data, in a folder you choose.</p>
+        <p>Optional live telemetry to A Better Route Planner, with your own ABRP token, for route planning on the real state of your pack.</p>
+      </div>
+    </section>
+  </main>
+
+  <section class="cards">
+    <div class="card"><h3>Read-only</h3><p>The app reads the car. It never writes to it or changes any setting.</p></div>
+    <div class="card"><h3>Your data stays on your phone</h3><p>No account, no ads, no analytics. <a href="privacy.html">Privacy policy</a>.</p></div>
+    <div class="card"><h3>What you need</h3><p>A Honda e and a Bluetooth ELM327-type OBD-II adapter (Bluetooth LE or Classic).</p></div>
+  </section>
+
+  <footer>
+    <ol class="notes">
+      <li id="note-charging"><span>*</span>Charging sessions are only exact while the car is on and the phone stays connected to the adapter for the whole charge. Any part of a charge the app could not read, for example while the car or the adapter was asleep, is an approximation built from the readings around it and what your charger reported.</li>
+      <li id="note-model"><span>**</span>The car illustrations are based on the 3D model <a href="https://sketchfab.com/3d-models/free-honda-e-detailed-interior-2021-814cf3f8cfd64594b1c4f96e873c3cef" rel="noopener">"FREE // Honda E (Detailed Interior) 2021"</a> by Alex Murias, used under <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">CC BY 4.0</a>.</li>
+    </ol>
+    <p>Honda e Dashboard is an independent app. It is not affiliated with, endorsed by or connected to Honda Motor Co., Ltd. "Honda e" is used only to say which car the app reads.</p>
+    <p>For information only. Don't operate your phone while driving.</p>
+    <p><a href="changelog.html">Changelog</a> · <a href="privacy.html">Privacy policy</a></p>
+  </footer>
+</div>
+</body>
+</html>

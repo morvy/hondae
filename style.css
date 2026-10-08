@@ -1,0 +1,91 @@
+:root {
+  --bg: #050508;
+  --surface: #0e0e14;
+  --line: #22222e;
+  --text: #ececf1;
+  --muted: #a0a0b0;
+  --accent: #8a7cff;
+  --accent-soft: #2a2550;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); }
+
+img { max-width: 100%; height: auto; display: block; }
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+
+header.top {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 0;
+}
+header.top .brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 600; }
+header.top .brand img { width: 32px; height: 32px; border-radius: 8px; }
+header.top nav a { color: var(--muted); text-decoration: none; margin-left: 20px; }
+header.top nav a:hover { color: var(--text); }
+
+.hero img { width: 100%; border-radius: 20px; }
+
+.lede { max-width: 680px; margin: 40px auto 0; text-align: center; color: var(--muted); font-size: 19px; }
+
+.features { display: flex; flex-direction: column; gap: 72px; margin: 80px 0; }
+
+.feature { display: grid; grid-template-columns: 280px 1fr; gap: 56px; align-items: center; }
+.feature:nth-child(even) { grid-template-columns: 1fr 280px; }
+.feature:nth-child(even) .shot { order: 2; }
+.feature .shot img { border-radius: 24px; outline: 1px solid rgba(255, 255, 255, .08); outline-offset: -1px; }
+.feature h2 { margin: 0 0 12px; font-size: 28px; line-height: 1.2; text-wrap: balance; }
+.feature p { margin: 0 0 12px; color: var(--muted); }
+
+.eyebrow { color: var(--accent); font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 80px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
+.card h3 { margin: 0 0 8px; font-size: 18px; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: var(--muted); font-size: 14px; }
+footer p { margin: 0 0 8px; }
+
+/* Privacy policy */
+.doc { max-width: 720px; margin: 24px auto 80px; }
+.doc h1 { font-size: 36px; line-height: 1.2; margin: 0 0 8px; }
+.doc h2 { font-size: 22px; margin: 40px 0 12px; }
+.doc .meta { color: var(--muted); margin: 0 0 32px; }
+.doc h2 + .meta { margin: -6px 0 12px; font-size: 15px; }
+.doc .summary { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 12px; padding: 20px 24px; }
+.doc .summary ul { margin: 0; padding-left: 20px; }
+.doc li { margin-bottom: 6px; }
+.doc table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.doc th, .doc td { text-align: left; vertical-align: top; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--line); }
+.doc th { color: var(--muted); font-weight: 600; }
+.doc code { font-size: 14px; background: var(--surface); padding: 1px 6px; border-radius: 6px; }
+
+@media (max-width: 720px) {
+  .feature, .feature:nth-child(even) { grid-template-columns: 1fr; gap: 24px; }
+  .feature:nth-child(even) .shot { order: 0; }
+  .feature .shot { max-width: 260px; margin: 0 auto; }
+  .hero img { border-radius: 12px; }
+  header.top nav a { margin-left: 14px; }
+  .doc table, .doc tbody, .doc tr, .doc td, .doc th { display: block; }
+  .doc thead { display: none; }
+  .doc td { border: 0; padding: 4px 0; }
+  .doc tr { border-bottom: 1px solid var(--line); padding: 10px 0; }
+}
+
+.note-ref { color: var(--accent); text-decoration: none; font-weight: 600; margin-left: 1px; }
+.notes { list-style: none; margin: 0 0 24px; padding: 0 0 24px; border-bottom: 1px solid var(--line); }
+.notes li { position: relative; padding-left: 2em; margin-bottom: 10px; }
+.notes li > span { position: absolute; left: 0; color: var(--accent); font-weight: 600; }
+.notes li:target { color: var(--text); }
