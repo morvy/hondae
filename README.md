@@ -10,6 +10,10 @@ Honda e Dashboard is an independent app, not affiliated with Honda Motor Co., Lt
 
 ## Changelog
 
+### 1.2.3 - 14 October 2026
+
+With the drive log on, the tyres and battery pages no longer pause the other readings, so the log keeps charge, distance and temperatures the whole drive; the cells refresh less often instead. Battery health and the cell charge levels now stay live on every page.
+
 ### 1.2.2 - 8 October 2026
 
 Next speed now shows only what changing speed is worth, worked out on your own consumption. Near empty it no longer promises tens of kilometres for slowing down a little.
