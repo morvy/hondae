@@ -10,6 +10,10 @@ Honda e Dashboard is an independent app, not affiliated with Honda Motor Co., Lt
 
 ## Changelog
 
+### 1.2.4 - 17 October 2026
+
+On a battery worn past its hidden reserve, energy left and the range estimate now count only what the pack can really give, rather than a new car's 28.5 kWh, so they no longer read high. Battery health is now shown in Ah, the unit the car reports; a new pack holds 100 Ah, so the number itself does not change. Raw reply logs now carry the right time of day even with trip readings off.
+
 ### 1.2.3 - 14 October 2026
 
 With the drive log on, the tyres and battery pages no longer pause the other readings, so the log keeps charge, distance and temperatures the whole drive; the cells refresh less often instead. Battery health and the cell charge levels now stay live on every page.
