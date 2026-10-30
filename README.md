@@ -10,6 +10,10 @@ Honda e Dashboard is an independent app, not affiliated with Honda Motor Co., Lt
 
 ## Changelog
 
+### 1.4.0 - 30 October 2026
+
+See what heating costs: the Power bar can show aux power in purple, with new tiles for climate, 12 V load, battery heat and heating cost in km. The new Drive graph shows power, speed and altitude for the whole drive, and Drive energy splits it into drive, aux and regen. The app now says when the car heats the battery, notes a cold pack when charging and reports charge lost while parked. Fewer false cell warnings in the cold, and a smaller app.
+
 ### 1.3.0 - 30 October 2026
 
 New: upload your logs to your own Google Drive. Choose a folder in Settings, File storage, and switch it on; each log is copied to a Honda e logs folder, and the app sees only the files it puts there. A new switch deletes logs over 30 days old from the phone; with Drive on only those already in Drive, and nothing is ever deleted from Drive. The app no longer freezes on a folder with hundreds of logs.
