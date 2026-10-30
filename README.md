@@ -10,6 +10,10 @@ Honda e Dashboard is an independent app, not affiliated with Honda Motor Co., Lt
 
 ## Changelog
 
+### 1.3.0 - 30 October 2026
+
+New: upload your logs to your own Google Drive. Choose a folder in Settings, File storage, and switch it on; each log is copied to a Honda e logs folder, and the app sees only the files it puts there. A new switch deletes logs over 30 days old from the phone; with Drive on only those already in Drive, and nothing is ever deleted from Drive. The app no longer freezes on a folder with hundreds of logs.
+
 ### 1.2.4 - 17 October 2026
 
 On a battery worn past its hidden reserve, energy left and the range estimate now count only what the pack can really give, rather than a new car's 28.5 kWh, so they no longer read high. Battery health is now shown in Ah, the unit the car reports; a new pack holds 100 Ah, so the number itself does not change. Raw reply logs now carry the right time of day even with trip readings off.
