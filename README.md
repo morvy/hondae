@@ -10,6 +10,10 @@ Honda e Dashboard is an independent app, not affiliated with Honda Motor Co., Lt
 
 ## Changelog
 
+### 1.4.1 - 31 October 2026
+
+A charge that drops out no longer splits into several sessions: the app waits for the car to say it is still charging, then asks whether to continue. The question now also comes as a notification with Continue and New session buttons, so you see it with the app closed. Fixed a crash when continuing a charge while the car was drawing power. A slightly smaller app.
+
 ### 1.4.0 - 30 October 2026
 
 See what heating costs: the Power bar can show aux power in purple, with new tiles for climate, 12 V load, battery heat and heating cost in km. The new Drive graph shows power, speed and altitude for the whole drive, and Drive energy splits it into drive, aux and regen. The app now says when the car heats the battery, notes a cold pack when charging and reports charge lost while parked. Fewer false cell warnings in the cold, and a smaller app.
