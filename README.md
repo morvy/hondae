@@ -10,6 +10,10 @@ Honda e Dashboard is an independent app, not affiliated with Honda Motor Co., Lt
 
 ## Changelog
 
+### 1.5.0 - 31 October 2026
+
+Edit a saved charge with what the charger showed: start, end, session time, energy or average. A charge the app sees late gets its missed start estimated. Estimates follow your pack's health, as do kWh to go, parked loss and ABRP on worn packs. A brief adapter dropout no longer splits a drive. Fixed: wrong SoC with the Battery or Tyres page open, Android 9 to 11 stopping with the screen off, false Car asleep, logs stuck on the phone, logs lost after deleting the Drive folder.
+
 ### 1.4.1 - 31 October 2026
 
 A charge that drops out no longer splits into several sessions: the app waits for the car to say it is still charging, then asks whether to continue. The question now also comes as a notification with Continue and New session buttons, so you see it with the app closed. Fixed a crash when continuing a charge while the car was drawing power. A slightly smaller app.
