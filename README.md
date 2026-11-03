@@ -10,6 +10,10 @@ Honda e Dashboard is an independent app, not affiliated with Honda Motor Co., Lt
 
 ## Changelog
 
+### 1.7.0 - 4 November 2026
+
+New tiles show the power the battery will give and take back right now, so you can see why regen is weak when it is cold or full. The Battery page has an AH view with each cell's capacity. Logs now record power and regen available, cell and insulation resistance, DC/DC temperature, the charging station's current limit and motor torque in N·m. The app notices more reliably when the car is switched off. Drive energy shows dashes until it has counted. A 100-120 V socket charge shows as AC.
+
 ### 1.6.1 - 3 November 2026
 
 Fixed the app freezing when you disconnect or switch the car off, which could leave that drive's logs on the phone instead of in your folder. Logs left behind are now moved within a couple of minutes, and empty log files left by earlier freezes are cleaned up.
