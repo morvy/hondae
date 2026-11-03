@@ -10,6 +10,10 @@ Honda e Dashboard is an independent app, not affiliated with Honda Motor Co., Lt
 
 ## Changelog
 
+### 1.6.1 - 3 November 2026
+
+Fixed the app freezing when you disconnect or switch the car off, which could leave that drive's logs on the phone instead of in your folder. Logs left behind are now moved within a couple of minutes, and empty log files left by earlier freezes are cleaned up.
+
 ### 1.6.0 - 3 November 2026
 
 Range, energy left and kWh to full now use what your battery really holds: the usable window shrinks with battery health, and a percent near empty holds less than one near full, so range reads lower and is right when it matters. The power gauge spends more of its arc on everyday driving, up to 140 kW and 50 kW of regen. An AC charge on a warm battery no longer shows as DC. Logs now record AC mains voltage, battery coolant temperatures and HV bus voltage.
