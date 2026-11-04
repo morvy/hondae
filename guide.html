@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guide · Honda e Dashboard</title>
+<meta name="description" content="Every page of the Honda e Dashboard and how to read it: dashboard tiles and widgets, battery health, charging, tyres, drive log and settings.">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="img/app-icon-512x512.png">
+<link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://morvy.github.io/hondae/guide.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Honda e Dashboard">
+<meta property="og:title" content="Guide · Honda e Dashboard">
+<meta property="og:description" content="Every widget and reading, and how to read it.">
+<meta property="og:url" content="https://morvy.github.io/hondae/guide.html">
+</head>
+<body>
+<div class="wrap wide-wrap">
+  <header class="top">
+    <a class="brand" href="./"><img src="img/app-icon-512x512.png" alt="">Honda e Dashboard</a>
+    <nav><a href="guide.html">Guide</a><a href="changelog.html">Changelog</a><a href="https://morvy.github.io/gpx-log-player/" rel="noopener">GPX Player</a><a href="privacy.html">Privacy</a></nav>
+  </header>
+
+  <nav class="tabs" aria-label="App pages"><a href="#page-dashboard">Dashboard</a><a href="#page-battery">Battery health</a><a href="#page-charging">Charging</a><a href="#page-tyres">Tyres</a><a href="#page-drive-log">Drive log</a><a href="#page-settings">Settings</a></nav>
+
+
+  <section class="panel" id="screen-dashboard" data-page="page-dashboard" aria-label="Dashboard">
+  <div class="guide">
+    <aside class="toc">
+      <details open>
+        <summary>Contents</summary>
+        <ul>
+          <li class="toc-group"><a href="#basics">Basics</a><ul><li><a href="#tiles">Reading a tile</a></li><li><a href="#refresh">How often it updates</a></li><li><a href="#battery-numbers">The battery's numbers</a></li><li><a href="#dash-vs-app">Dash and app side by side</a></li></ul></li>
+          <li class="toc-group"><a href="#widgets">Widgets</a><ul><li><a href="#widgets-load-analysis">Load analysis</a></li><li><a href="#widgets-car">Car</a></li><li><a href="#widgets-drive-graph">Drive graph</a></li><li><a href="#widgets-drive-energy">Drive energy</a></li><li><a href="#widgets-power-bar">Power bar</a></li><li><a href="#widgets-power-bar-show-aux">Power bar · Show aux</a></li><li><a href="#widgets-power-bar-hill-split">Power bar · Hill split</a></li><li><a href="#widgets-cost-of-speed-curve">Cost of speed (curve)</a></li><li><a href="#widgets-next-speed-range">Next speed · range</a></li><li><a href="#widgets-next-speed-consumption">Next speed · consumption</a></li><li><a href="#widgets-next-speed-percent">Next speed · percent</a></li><li><a href="#widgets-kw-readout">kW readout</a></li><li><a href="#widgets-value">Value</a></li></ul></li><li class="toc-group"><a href="#battery">Battery</a><ul><li><a href="#battery-charge">CHARGE</a></li><li><a href="#battery-energy">ENERGY LEFT</a></li><li><a href="#battery-capacity">CAPACITY</a></li><li><a href="#battery-reserve">RESERVE</a></li><li><a href="#battery-health">HEALTH</a></li><li><a href="#battery-pack-soc">BMS SOC</a></li><li><a href="#battery-cell-soc">WEAK CELL</a></li><li><a href="#battery-soc-spread">SOC SPREAD</a></li><li><a href="#battery-cell-high">CELL HIGH</a></li><li><a href="#battery-cell-low">CELL LOW</a></li><li><a href="#battery-cell-spread">CELL SPREAD</a></li><li><a href="#battery-pack-volts">PACK VOLTS</a></li><li><a href="#battery-current">CURRENT</a></li><li><a href="#battery-pack-temp">PACK TEMP</a></li><li><a href="#battery-power-avail">DRAW LIMIT</a></li><li><a href="#battery-regen-avail">REGEN LIMIT</a></li><li><a href="#battery-cell-r-max">CELL R MAX</a></li><li><a href="#battery-insulation">INSULATION</a></li></ul></li><li class="toc-group"><a href="#driving">Driving</a><ul><li><a href="#driving-power">POWER</a></li><li><a href="#driving-speed">SPEED</a></li><li><a href="#driving-holding">HOLDING</a></li><li><a href="#driving-hill">HILL</a></li><li><a href="#driving-altitude">ALTITUDE</a></li><li><a href="#driving-grade">GRADE</a></li><li><a href="#driving-odometer">ODOMETER</a></li><li><a href="#driving-torque">TORQUE</a></li></ul></li><li class="toc-group"><a href="#range-and-consumption">Range and consumption</a><ul><li><a href="#range-and-consumption-range-now">RANGE NOW</a></li><li><a href="#range-and-consumption-range-avg">RANGE AVG</a></li><li><a href="#range-and-consumption-range-chg">RANGE CHG</a></li><li><a href="#range-and-consumption-range-car">RANGE CAR</a></li><li><a href="#range-and-consumption-range">RANGE</a></li><li><a href="#range-and-consumption-using">USING</a></li><li><a href="#range-and-consumption-using-avg">USING AVG</a></li><li><a href="#range-and-consumption-using-chg">USING CHG</a></li><li><a href="#range-and-consumption-best-min">BEST MINUTE</a></li><li><a href="#range-and-consumption-worst-min">WORST MINUTE</a></li></ul></li><li class="toc-group"><a href="#heating-and-12-v">Heating and 12 V</a><ul><li><a href="#heating-and-12-v-aux-power">AUX LOAD</a></li><li><a href="#heating-and-12-v-climate">CLIMATE</a></li><li><a href="#heating-and-12-v-12v-load">12V LOAD</a></li><li><a href="#heating-and-12-v-batt-heat">PACK HEAT</a></li><li><a href="#heating-and-12-v-heating-cost">HEATING COST</a></li><li><a href="#heating-and-12-v-12v">12V BATT</a></li><li><a href="#heating-and-12-v-outside">OUTSIDE</a></li><li><a href="#heating-and-12-v-charger">CHARGER TEMP</a></li><li><a href="#heating-and-12-v-cabin">CABIN</a></li></ul></li><li class="toc-group"><a href="#charging">Charging</a><ul><li><a href="#charging-mains">MAINS</a></li><li><a href="#charging-evse-limit">STATION LIMIT</a></li></ul></li>
+        </ul>
+      </details>
+    </aside>
+    <script>if (matchMedia('(max-width: 860px)').matches) document.querySelector('.toc details').open = false;</script>
+
+    <main>
+      <h1 id="basics">Dashboard guide</h1>
+      <p class="meta">Pictures from a real drive replayed through the app: 3 November 2026, 8 °C, heater on, 30 minutes in.
+      Each widget at the size it gets when added; tap one for full size.</p>
+
+      <h2 id="tiles">Reading a tile</h2>
+      <article class="item s2"><a class="shot" href="img/guide/value-charge.png"><img src="img/guide/value-charge.png" alt="CHARGE tile"></a>
+        <div><p>Name, the value now, its unit, and a small line: <strong>lowest / average / highest</strong> since the app
+        was opened. <strong>--</strong> is no reading yet: not answered, the trip is too short, or it needs the car to move.
+        A grey tile in the editor is one your adapter cannot deliver.</p></div></article>
+
+
+      <aside class="callout" id="refresh">
+        <h4>How often each reading updates</h4>
+        <table class="rates">
+          <tr><th>About every 0.2 s</th><td>The battery's main reply (ECU 01): POWER, CURRENT, PACK VOLTS, SPEED, WEAK CELL, BMS SOC, CELL HIGH / LOW / SPREAD, PACK TEMP, 12V, POWER / REGEN LIMIT, TORQUE, CABIN, CELL R MAX, INSULATION.</td></tr>
+          <tr><th>About every 6 s</th><td>ECU 15's state reply: CHARGE, AUX LOAD, CLIMATE, 12V LOAD, PACK HEAT, SOC SPREAD.</td></tr>
+          <tr><th>About every 20 s</th><td>The slow round: HEALTH, CHARGER TEMP, MAINS, STATION LIMIT (ECU 15), ODOMETER, OUTSIDE, RANGE CAR (ECU 60).</td></tr>
+          <tr><th>About every 1 s</th><td>The phone's GPS: ALTITUDE, GRADE, and the distance behind BEST / WORST MINUTE and Load analysis.</td></tr>
+        </table>
+        <p>The editor shows the same thing when you pick a reading: "every cycle" or "1 in N". Adding tiles costs nothing;
+        the app asks the car for everything it knows how to read either way.</p>
+        <h4>What that means side by side</h4>
+        <ul>
+          <li><strong>Calculated readings move at their slowest input.</strong> ENERGY LEFT follows CHARGE, so it steps every few
+          seconds while POWER moves continuously. RANGE and USING blend fast power with distance, so they drift rather than jump.</li>
+          <li><strong>Fast and slow tiles disagree for a moment.</strong> Switch the heater on and POWER rises at once, while
+          CLIMATE and AUX LOAD catch up within about 6 seconds. That lag is the car's reply rate, not a fault.</li>
+          <li><strong>The 20 s readings barely matter on a drive:</strong> health, the odometer and the outside temperature
+          change slowly anyway.</li>
+          <li><strong>The Battery and Tyres pages take the link while they are open,</strong> to sample cells or wheels as
+          fast as possible. Dashboard tiles that are not on the same reply pause until you leave the page.</li>
+        </ul>
+      </aside>
+      <h2 id="battery-numbers">The battery's numbers</h2>
+      <p>Seven tiles sound alike and answer different questions. The bar is the whole pack, in proportion to its kWh.</p>
+      <div class="battery">
+        <div class="pack" role="img" aria-label="The pack: reserve at the top, the dash's 0 to 100 percent window, reserve at the bottom">
+      <div class="pack-top">top reserve, about 1.3 kWh</div>
+      <div class="pack-window"><span class="pack-used">used since full, 14.1 kWh</span><span class="pack-left">ENERGY LEFT: to drive on, 11.2 kWh</span></div>
+      <div class="pack-bottom">bottom reserve, about 4.9 kWh</div>
+    </div>
+        <table class="glossary">
+      <thead><tr><th>Tile</th><th>In this drive</th><th>What it is</th><th>Use it for</th></tr></thead>
+      <tbody>
+        <tr><td>CHARGE</td><td data-v="charge">51.6 %</td><td>The car's own percentage, the one on the dash. 0 to 100 % of the
+          window, not of the pack.</td><td>Same number as the car, so plans and chargers agree.</td></tr>
+        <tr><td>ENERGY LEFT</td><td data-v="energy">11.2 kWh</td><td>kWh left in the window: what you can still drive on before the dash
+          reads 0 %.</td><td>Planning. A charger bills kWh and a route costs kWh. A percent near empty holds less than one
+          near full, so this is better than CHARGE × something.</td></tr>
+        <tr><td>CAPACITY</td><td data-v="capacity">31.5 kWh</td><td>What the whole pack holds now: 35.5 kWh when new, times its
+          health.</td><td>How worn the pack is, in kWh.</td></tr>
+        <tr><td>RESERVE</td><td data-v="reserve">6.2 kWh</td><td>What the battery keeps back from you: CAPACITY minus the dash's
+          window. About a fifth of the pack.</td><td>Knowing what is under 0 %. It is not yours to drive on, and it shrinks
+          as the pack wears.</td></tr>
+        <tr><td>HEALTH</td><td data-v="health">88.7 Ah</td><td>The pack's charge capacity in amp-hours. New is 100 Ah, so the
+          number reads as a percentage of new.</td><td>Battery health over months. It steps down every few weeks or months; it has not been seen to go back up.</td></tr>
+        <tr><td>BMS SOC</td><td data-v="pack_soc">53.0 %</td><td>The battery's own scale, reserve included. The dash's 100 % is
+          about 96 on it and the dash's 0 % about 10. These are points on that scale, not a share of the kWh.</td><td>Seeing the
+          reserve move. It runs a little above CHARGE in the middle.</td></tr>
+        <tr><td>WEAK CELL</td><td data-v="cell_soc">50 %</td><td>The weakest cell, on the dash's scale, in whole percent. It
+          dips under load and recovers at rest.</td><td>Near empty: the car re-bases CHARGE onto this cell, so when CHARGE
+          sits well above it the dash will drop to meet it. CHARGE then turns amber and says what it may fall to.</td></tr>
+        <tr><td>SOC SPREAD</td><td data-v="cell_delta">0.7</td><td>The gap between the fullest and the emptiest cell, in
+          points of the pack's scale.</td><td>Balance. Small is healthy; a spread that keeps growing over weeks is worth
+          a look on the battery page.</td></tr>
+      </tbody>
+    </table>
+      </div>
+      <p class="note">CHARGE is what the car shows, ENERGY LEFT what it is worth, CAPACITY and HEALTH how big the battery still
+      is, RESERVE the part you never get. At 51.6 % ENERGY LEFT read 11.2 kWh, not half of the 25.3 kWh window: the lower half
+      holds less.</p>
+      <aside class="callout" id="dash-vs-app">
+        <h4>The dash and the app side by side</h4>
+        <ul>
+          <li><strong>Dash 52 %, CHARGE 51.6 %.</strong> The same figure: the app reads the car's own number with two
+          decimals; the dash rounds it and updates on its own schedule. CHARGE refreshes about every 6 s, so a point apart
+          for a few seconds is normal.</li>
+          <li><strong>Dash 15 %, WEAK CELL 8 %.</strong> Near empty the car re-bases its figure onto the weakest cell, so
+          the dash can drop several points at once. CHARGE turns amber and says what it may fall to before that happens.</li>
+          <li><strong>Dash range 84 km, RANGE AVG 50 km.</strong> The car's estimate (RANGE CAR) changes slowly and leans on
+          its own history; the app divides the charge left by how this drive has actually gone. On a cold, short trip with
+          the heater on the app reads lower; on a long steady drive the two come together.</li>
+          <li><strong>The charger billed more kWh than ENERGY LEFT went up.</strong> On AC about 7 % is lost in the on-board
+          charger, and the battery gives back about 5 % less than it took in, so a 0 to 100 % charge here (about 25 kWh to
+          drive on) meters roughly 28 to 29 kWh at the wall.</li>
+          <li><strong>The speedometer reads a little above SPEED.</strong> Car speedometers may read high but never low, so
+          the dash is usually a few percent over the wheel speed the app shows.</li>
+        </ul>
+      </aside>
+
+
+      <h2 id="widgets">Widgets</h2>
+<div class="items full"><article class="item s6" id="widgets-load-analysis"><a class="shot" href="img/guide/load.png"><img src="img/guide/load.png" alt="Load analysis" loading="lazy"></a><div><h3>Load analysis <span class="src calc">Calculated</span></h3><p>One bar per minute, height is that minute&#x27;s kWh/100km. Blue up spent energy, green down gave back more than it took, a grey stub is a minute standing still. Compare bars with each other; set 5 to 60 minutes in the editor.</p><div class="uses"><a class="chip" href="#driving-power">POWER</a><span class="chip">Phone GPS distance</span></div></div></article><article class="item s6" id="widgets-car"><a class="shot" href="img/guide/car.png"><img src="img/guide/car.png" alt="Car" loading="lazy"></a><div><h3>Car <span class="src calc">Connection state</span></h3><p>Your car in your paint. Lit daytime rings: the car is answering. Dark: it is not. At night the dipped beam comes on too.</p></div></article><article class="item s6" id="widgets-drive-graph"><a class="shot" href="img/guide/drive-graph.png"><img src="img/guide/drive-graph.png" alt="Drive graph" loading="lazy"></a><div><h3>Drive graph <span class="src calc">Calculated</span></h3><p>The whole drive fitted to the width: power blue above zero and green below, speed yellow, altitude the magenta area, each on its own scale. Under it: duration, peak draw and regen, top speed, altitude range.</p><div class="uses"><a class="chip" href="#driving-power">POWER</a><a class="chip" href="#driving-speed">SPEED</a><a class="chip" href="#driving-altitude">ALTITUDE</a></div></div></article><article class="item s6" id="widgets-drive-energy"><a class="shot" href="img/guide/drive-energy.png"><img src="img/guide/drive-energy.png" alt="Drive energy" loading="lazy"></a><div><h3>Drive energy <span class="src calc">Calculated</span></h3><p>This trip&#x27;s kWh: blue moved the car, purple heated and powered the 12 V side, green is what regen got back. Drive plus aux minus regen left the battery. The numbers can be white instead: set it in the editor.</p><div class="uses"><a class="chip" href="#driving-power">POWER</a><a class="chip" href="#heating-and-12-v-aux-power">AUX LOAD</a></div></div></article></div>
+<div class="items"><article class="item s4" id="widgets-power-bar"><a class="shot" href="img/guide/power-bar.png"><img src="img/guide/power-bar.png" alt="Power bar" loading="lazy"></a><div><h3>Power bar <span class="src calc">Calculated</span></h3><p>Power in or out of the battery, both ways from zero. The dim fill is what holding your speed takes, the bright part beyond it is accelerating. All dim and long: a hill or a headwind. The number includes heater and 12 V.</p><div class="uses"><a class="chip" href="#driving-power">POWER</a><a class="chip" href="#driving-holding">HOLDING</a></div></div></article><article class="item s4" id="widgets-power-bar-show-aux"><a class="shot" href="img/guide/power-bar-aux.png"><img src="img/guide/power-bar-aux.png" alt="Power bar · Show aux" loading="lazy"></a><div><h3>Power bar · Show aux <span class="src calc">Calculated</span></h3><p>Heating, cooling, heated seats and the 12 V side drawn in purple on top, and printed beside the unit. Moves in steps: the car reports it about every 6 s.</p><div class="uses"><a class="chip" href="#driving-power">POWER</a><a class="chip" href="#heating-and-12-v-aux-power">AUX LOAD</a></div></div></article><article class="item s4" id="widgets-power-bar-hill-split"><a class="shot" href="img/guide/power-bar-hill.png"><img src="img/guide/power-bar-hill.png" alt="Power bar · Hill split" loading="lazy"></a><div><h3>Power bar · Hill split <span class="src calc">Calculated</span></h3><p>The fill split into base power and the hill&#x27;s share: purple uphill, magenta at full throttle, green where the hill gives energy back. Needs location.</p><div class="uses"><a class="chip" href="#driving-power">POWER</a><a class="chip" href="#driving-hill">HILL</a></div></div></article><article class="item s4" id="widgets-cost-of-speed-curve"><a class="shot" href="img/guide/speed-cost.png"><img src="img/guide/speed-cost.png" alt="Cost of speed (curve)" loading="lazy"></a><div><h3>Cost of speed (curve) <span class="src calc">Calculated</span></h3><p>The consumption curve you are on and where you sit. On the flat part slowing down saves little, on the steep part a lot. Dots are speeds you held: above the line a climb or headwind, below a descent. Blank under ~18 km/h.</p><div class="uses"><a class="chip" href="#driving-power">POWER</a><a class="chip" href="#driving-speed">SPEED</a></div></div></article><article class="item s4" id="widgets-next-speed-range"><a class="shot" href="img/guide/speed-step-range.png"><img src="img/guide/speed-step-range.png" alt="Next speed · range" loading="lazy"></a><div><h3>Next speed · range <span class="src calc">Calculated</span></h3><p>What moving to the next posted speed is worth, in range. Set your own speed steps in the editor.</p><div class="uses"><a class="chip" href="#driving-power">POWER</a><a class="chip" href="#driving-speed">SPEED</a><a class="chip" href="#battery-energy">ENERGY LEFT</a></div></div></article><article class="item s4" id="widgets-next-speed-consumption"><a class="shot" href="img/guide/speed-step-consumption.png"><img src="img/guide/speed-step-consumption.png" alt="Next speed · consumption" loading="lazy"></a><div><h3>Next speed · consumption <span class="src calc">Calculated</span></h3><p>The same step as a change in kWh/100km.</p><div class="uses"><a class="chip" href="#driving-power">POWER</a><a class="chip" href="#driving-speed">SPEED</a></div></div></article><article class="item s4" id="widgets-next-speed-percent"><a class="shot" href="img/guide/speed-step-percent.png"><img src="img/guide/speed-step-percent.png" alt="Next speed · percent" loading="lazy"></a><div><h3>Next speed · percent <span class="src calc">Calculated</span></h3><p>The same step as a share of what you use now.</p><div class="uses"><a class="chip" href="#driving-power">POWER</a><a class="chip" href="#driving-speed">SPEED</a></div></div></article></div>
+<div class="items"><article class="item s2" id="widgets-kw-readout"><a class="shot" href="img/guide/kw.png"><img src="img/guide/kw.png" alt="kW readout" loading="lazy"></a><div><h3>kW readout <span class="src calc">Calculated</span></h3><p>The same power as one big number. Plus is draw, minus is regeneration. Coloured like the bar, or white: set it in the editor.</p><div class="uses"><a class="chip" href="#battery-pack-volts">PACK VOLTS</a><a class="chip" href="#battery-current">CURRENT</a></div></div></article><article class="item s2" id="widgets-value"><a class="shot" href="img/guide/value-health.png"><img src="img/guide/value-health.png" alt="Value" loading="lazy"></a><div><h3>Value</h3><p>One reading, whichever you point it at. All of them are listed below.</p></div></article></div>
+<h2 id="battery">Battery</h2>
+<div class="items">
+<article class="item s2" id="battery-charge"><a class="shot" href="img/guide/value-charge.png"><img src="img/guide/value-charge.png" alt="CHARGE" loading="lazy"></a><div><h3>CHARGE <span class="src ecu">ECU 15</span></h3><p>The dash&#x27;s percentage, 0 to 100 % of the usable window. Turns amber with &quot;may fall to&quot; when the car is about to drop it onto the weakest cell.</p></div></article>
+<article class="item s2" id="battery-energy"><a class="shot" href="img/guide/value-energy.png"><img src="img/guide/value-energy.png" alt="ENERGY LEFT" loading="lazy"></a><div><h3>ENERGY LEFT <span class="src calc">Calculated</span></h3><p>kWh left before the dash reads 0 %. A percent near empty holds less than one near full, so this is what to plan with.</p><div class="uses"><a class="chip" href="#battery-charge">CHARGE</a><a class="chip" href="#battery-health">HEALTH</a></div></div></article>
+<article class="item s2" id="battery-capacity"><a class="shot" href="img/guide/value-capacity.png"><img src="img/guide/value-capacity.png" alt="CAPACITY" loading="lazy"></a><div><h3>CAPACITY <span class="src calc">Calculated</span></h3><p>What the whole pack holds now: 35.5 kWh new, times its health.</p><div class="uses"><a class="chip" href="#battery-health">HEALTH</a></div></div></article>
+<article class="item s2" id="battery-reserve"><a class="shot" href="img/guide/value-reserve.png"><img src="img/guide/value-reserve.png" alt="RESERVE" loading="lazy"></a><div><h3>RESERVE <span class="src calc">Calculated</span></h3><p>What the battery keeps from you, above 100 % and below 0 % together. About a fifth of the pack; it shrinks as the pack wears.</p><div class="uses"><a class="chip" href="#battery-health">HEALTH</a></div></div></article>
+<article class="item s2" id="battery-health"><a class="shot" href="img/guide/value-health.png"><img src="img/guide/value-health.png" alt="HEALTH" loading="lazy"></a><div><h3>HEALTH <span class="src ecu">ECU 15</span></h3><p>Pack capacity in Ah. New is 100, so it reads as percent of new. Steps down every few weeks or months; it has not been seen to go back up.</p></div></article>
+<article class="item s2" id="battery-pack-soc"><a class="shot" href="img/guide/value-pack_soc.png"><img src="img/guide/value-pack_soc.png" alt="BMS SOC" loading="lazy"></a><div><h3>BMS SOC <span class="src ecu">ECU 15</span></h3><p>The battery&#x27;s own scale, reserve included. The dash&#x27;s 100 % is about 96 on it, its 0 % about 10: points on its scale, not a share of the kWh.</p></div></article>
+<article class="item s2" id="battery-cell-soc"><a class="shot" href="img/guide/value-cell_soc.png"><img src="img/guide/value-cell_soc.png" alt="WEAK CELL" loading="lazy"></a><div><h3>WEAK CELL <span class="src ecu">ECU 01</span></h3><p>The weakest cell on the dash&#x27;s scale, whole percent. Dips under load. Near empty the dash drops to meet it.</p></div></article>
+<article class="item s2" id="battery-soc-spread"><a class="shot" href="img/guide/value-cell_delta.png"><img src="img/guide/value-cell_delta.png" alt="SOC SPREAD" loading="lazy"></a><div><h3>SOC SPREAD <span class="src calc">Calculated</span></h3><p>Fullest minus emptiest cell, in points of the pack&#x27;s scale. Small is healthy; growing over weeks is worth a look.</p><div class="uses"><span class="chip">cell SoC max/min (ECU 15)</span></div></div></article>
+<article class="item s2" id="battery-cell-high"><a class="shot" href="img/guide/value-cell_high.png"><img src="img/guide/value-cell_high.png" alt="CELL HIGH" loading="lazy"></a><div><h3>CELL HIGH <span class="src ecu">ECU 01</span></h3><p>Voltage of the fullest cell.</p></div></article>
+<article class="item s2" id="battery-cell-low"><a class="shot" href="img/guide/value-cell_low.png"><img src="img/guide/value-cell_low.png" alt="CELL LOW" loading="lazy"></a><div><h3>CELL LOW <span class="src ecu">ECU 01</span></h3><p>Voltage of the emptiest cell.</p></div></article>
+<article class="item s2" id="battery-cell-spread"><a class="shot" href="img/guide/value-cell_spread.png"><img src="img/guide/value-cell_spread.png" alt="CELL SPREAD" loading="lazy"></a><div><h3>CELL SPREAD <span class="src calc">Calculated</span></h3><p>The measured gap between them, in mV. Widens towards full and under load.</p><div class="uses"><a class="chip" href="#battery-cell-high">CELL HIGH</a><a class="chip" href="#battery-cell-low">CELL LOW</a></div></div></article>
+<article class="item s2" id="battery-pack-volts"><a class="shot" href="img/guide/value-pack_voltage.png"><img src="img/guide/value-pack_voltage.png" alt="PACK VOLTS" loading="lazy"></a><div><h3>PACK VOLTS <span class="src ecu">ECU 01</span></h3><p>All 96 cells in series. Sags under load, rises with charge.</p></div></article>
+<article class="item s2" id="battery-current"><a class="shot" href="img/guide/value-current.png"><img src="img/guide/value-current.png" alt="CURRENT" loading="lazy"></a><div><h3>CURRENT <span class="src ecu">ECU 01</span></h3><p>Battery current. Plus is draw, minus is regeneration.</p></div></article>
+<article class="item s2" id="battery-pack-temp"><a class="shot" href="img/guide/value-pack_temp.png"><img src="img/guide/value-pack_temp.png" alt="PACK TEMP" loading="lazy"></a><div><h3>PACK TEMP <span class="src ecu">ECU 01</span></h3><p>Battery temperature. Cold limits regen and fast charging.</p></div></article>
+<article class="item s2" id="battery-power-avail"><a class="shot" href="img/guide/value-power_available.png"><img src="img/guide/value-power_available.png" alt="DRAW LIMIT" loading="lazy"></a><div><h3>DRAW LIMIT <span class="src ecu">ECU 01</span></h3><p>The most the battery will give right now. Lower when cold or nearly empty.</p></div></article>
+<article class="item s2" id="battery-regen-avail"><a class="shot" href="img/guide/value-regen_available.png"><img src="img/guide/value-regen_available.png" alt="REGEN LIMIT" loading="lazy"></a><div><h3>REGEN LIMIT <span class="src ecu">ECU 01</span></h3><p>The most it will take back right now. Lower when cold or nearly full, which is when regen feels weak.</p></div></article>
+<article class="item s2" id="battery-cell-r-max"><a class="shot" href="img/guide/value-cell_resistance.png"><img src="img/guide/value-cell_resistance.png" alt="CELL R MAX" loading="lazy"></a><div><h3>CELL R MAX <span class="src ecu">ECU 01</span></h3><p>The battery&#x27;s estimate of its highest cell resistance, in milliohms. Higher in the cold (1.17 here at 9 °C) and, slowly, with age.</p></div></article>
+<article class="item s2" id="battery-insulation"><a class="shot" href="img/guide/value-insulation.png"><img src="img/guide/value-insulation.png" alt="INSULATION" loading="lazy"></a><div><h3>INSULATION <span class="src ecu">ECU 01</span></h3><p>How well the high-voltage system is insulated from the car&#x27;s body, in kilohms. High is good: 1000 is the top of its scale. The car warns long before it matters.</p></div></article>
+</div>
+<h2 id="driving">Driving</h2>
+<div class="items">
+<article class="item s2" id="driving-power"><a class="shot" href="img/guide/value-power.png"><img src="img/guide/value-power.png" alt="POWER" loading="lazy"></a><div><h3>POWER <span class="src calc">Calculated</span></h3><p>In or out of the battery, everything included. Plus is draw.</p><div class="uses"><a class="chip" href="#battery-pack-volts">PACK VOLTS</a><a class="chip" href="#battery-current">CURRENT</a></div></div></article>
+<article class="item s2" id="driving-speed"><a class="shot" href="img/guide/value-speed.png"><img src="img/guide/value-speed.png" alt="SPEED" loading="lazy"></a><div><h3>SPEED <span class="src ecu">ECU 01</span></h3><p>The car&#x27;s wheel speed; GPS when the car&#x27;s is missing.</p></div></article>
+<article class="item s2" id="driving-holding"><a class="shot" href="img/guide/value-hold.png"><img src="img/guide/value-hold.png" alt="HOLDING" loading="lazy"></a><div><h3>HOLDING <span class="src calc">Calculated</span></h3><p>Power needed to keep the current speed on this road. Needs location.</p><div class="uses"><a class="chip" href="#driving-power">POWER</a><a class="chip" href="#driving-speed">SPEED</a><span class="chip">Phone GPS</span></div></div></article>
+<article class="item s2" id="driving-hill"><a class="shot" href="img/guide/value-hill.png"><img src="img/guide/value-hill.png" alt="HILL" loading="lazy"></a><div><h3>HILL <span class="src calc">Calculated</span></h3><p>The hill&#x27;s share of the power. Mostly returned on the way down.</p><div class="uses"><a class="chip" href="#driving-grade">GRADE</a><a class="chip" href="#driving-speed">SPEED</a></div></div></article>
+<article class="item s2" id="driving-altitude"><a class="shot" href="img/guide/value-altitude.png"><img src="img/guide/value-altitude.png" alt="ALTITUDE" loading="lazy"></a><div><h3>ALTITUDE <span class="src gps">Phone</span></h3><p>Height above sea level, from GPS.</p></div></article>
+<article class="item s2" id="driving-grade"><a class="shot" href="img/guide/value-grade.png"><img src="img/guide/value-grade.png" alt="GRADE" loading="lazy"></a><div><h3>GRADE <span class="src gps">Phone</span></h3><p>The last 200 m of road, so about 100 m behind you. Plus is uphill.</p><div class="uses"><span class="chip">Phone GPS altitude</span></div></div></article>
+<article class="item s2" id="driving-odometer"><a class="shot" href="img/guide/value-odometer.png"><img src="img/guide/value-odometer.png" alt="ODOMETER" loading="lazy"></a><div><h3>ODOMETER <span class="src ecu">ECU 60</span></h3><p>Total distance, as the car counts it.</p></div></article>
+<article class="item s2" id="driving-torque"><a class="shot" href="img/guide/value-torque.png"><img src="img/guide/value-torque.png" alt="TORQUE" loading="lazy"></a><div><h3>TORQUE <span class="src ecu">ECU 01</span></h3><p>What the motor is asked for, in newton-metres. Negative while regenerating; the motor&#x27;s most is about 315.</p></div></article></div>
+<h2 id="range-and-consumption">Range and consumption</h2>
+<div class="items">
+<article class="item s2" id="range-and-consumption-range-now"><a class="shot" href="img/guide/value-range-current.png"><img src="img/guide/value-range-current.png" alt="RANGE NOW" loading="lazy"></a><div><h3>RANGE NOW <span class="src calc">Calculated</span></h3><p>Charge left divided by the last five kilometres&#x27; consumption. Swings with every hill.</p><div class="uses"><a class="chip" href="#battery-energy">ENERGY LEFT</a><a class="chip" href="#range-and-consumption-using">USING</a></div></div></article>
+<article class="item s2" id="range-and-consumption-range-avg"><a class="shot" href="img/guide/value-range-average.png"><img src="img/guide/value-range-average.png" alt="RANGE AVG" loading="lazy"></a><div><h3>RANGE AVG <span class="src calc">Calculated</span></h3><p>From this drive&#x27;s consumption. A drive ends after five minutes off.</p><div class="uses"><a class="chip" href="#battery-energy">ENERGY LEFT</a><a class="chip" href="#range-and-consumption-using-avg">USING AVG</a></div></div></article>
+<article class="item s2" id="range-and-consumption-range-chg"><a class="shot" href="img/guide/value-range-since_charge.png"><img src="img/guide/value-range-since_charge.png" alt="RANGE CHG" loading="lazy"></a><div><h3>RANGE CHG <span class="src calc">Calculated</span></h3><p>From everything since the last charge, across drives and days.</p><div class="uses"><a class="chip" href="#battery-energy">ENERGY LEFT</a><a class="chip" href="#range-and-consumption-using-chg">USING CHG</a></div></div></article>
+<article class="item s2" id="range-and-consumption-range-car"><a class="shot" href="img/guide/value-range-vehicle.png"><img src="img/guide/value-range-vehicle.png" alt="RANGE CAR" loading="lazy"></a><div><h3>RANGE CAR <span class="src ecu">ECU 60</span></h3><p>The car&#x27;s own estimate.</p></div></article>
+<article class="item s2" id="range-and-consumption-range"><a class="shot" href="img/guide/value-range-both.png"><img src="img/guide/value-range-both.png" alt="RANGE" loading="lazy"></a><div><h3>RANGE <span class="src calc">Calculated</span></h3><p>NOW large, with AVG and CAR under it.</p><div class="uses"><a class="chip" href="#battery-energy">ENERGY LEFT</a><a class="chip" href="#range-and-consumption-using">USING</a><a class="chip" href="#range-and-consumption-range-car">RANGE CAR</a></div></div></article>
+<article class="item s2" id="range-and-consumption-using"><a class="shot" href="img/guide/value-using-now.png"><img src="img/guide/value-using-now.png" alt="USING" loading="lazy"></a><div><h3>USING <span class="src calc">Calculated</span></h3><p>Consumption over the last five kilometres.</p><div class="uses"><a class="chip" href="#driving-power">POWER</a><a class="chip" href="#driving-odometer">ODOMETER</a><a class="chip" href="#driving-speed">SPEED</a></div></div></article>
+<article class="item s2" id="range-and-consumption-using-avg"><a class="shot" href="img/guide/value-using-trip.png"><img src="img/guide/value-using-trip.png" alt="USING AVG" loading="lazy"></a><div><h3>USING AVG <span class="src calc">Calculated</span></h3><p>Consumption over this drive.</p><div class="uses"><a class="chip" href="#driving-power">POWER</a><a class="chip" href="#driving-odometer">ODOMETER</a><a class="chip" href="#driving-speed">SPEED</a></div></div></article>
+<article class="item s2" id="range-and-consumption-using-chg"><a class="shot" href="img/guide/value-using-since-charge.png"><img src="img/guide/value-using-since-charge.png" alt="USING CHG" loading="lazy"></a><div><h3>USING CHG <span class="src calc">Calculated</span></h3><p>Consumption since the last charge.</p><div class="uses"><a class="chip" href="#battery-charge">CHARGE</a><a class="chip" href="#driving-odometer">ODOMETER</a><a class="chip" href="#driving-power">POWER</a></div></div></article>
+<article class="item s2" id="range-and-consumption-best-min"><a class="shot" href="img/guide/value-best_minute.png"><img src="img/guide/value-best_minute.png" alt="BEST MINUTE" loading="lazy"></a><div><h3>BEST MINUTE <span class="src calc">Calculated</span></h3><p>Most economical minute of the last hour. Standing still does not count.</p><div class="uses"><a class="chip" href="#driving-power">POWER</a><span class="chip">Phone GPS distance</span></div></div></article>
+<article class="item s2" id="range-and-consumption-worst-min"><a class="shot" href="img/guide/value-worst_minute.png"><img src="img/guide/value-worst_minute.png" alt="WORST MINUTE" loading="lazy"></a><div><h3>WORST MINUTE <span class="src calc">Calculated</span></h3><p>Least economical minute of the last hour.</p><div class="uses"><a class="chip" href="#driving-power">POWER</a><span class="chip">Phone GPS distance</span></div></div></article>
+</div>
+<h2 id="heating-and-12-v">Heating and 12 V</h2>
+<div class="items">
+<article class="item s2" id="heating-and-12-v-aux-power"><a class="shot" href="img/guide/value-aux_power.png"><img src="img/guide/value-aux_power.png" alt="AUX LOAD" loading="lazy"></a><div><h3>AUX LOAD <span class="src ecu">ECU 15</span></h3><p>Everything besides the motor: climate, battery heating, the 12 V side.</p></div></article>
+<article class="item s2" id="heating-and-12-v-climate"><a class="shot" href="img/guide/value-climate.png"><img src="img/guide/value-climate.png" alt="CLIMATE" loading="lazy"></a><div><h3>CLIMATE <span class="src calc">Calculated</span></h3><p>Cabin heating and cooling, worked out from the aux power.</p><div class="uses"><a class="chip" href="#heating-and-12-v-aux-power">AUX LOAD</a><a class="chip" href="#heating-and-12-v-12v-load">12V LOAD</a><a class="chip" href="#heating-and-12-v-batt-heat">PACK HEAT</a></div></div></article>
+<article class="item s2" id="heating-and-12-v-12v-load"><a class="shot" href="img/guide/value-dcdc.png"><img src="img/guide/value-dcdc.png" alt="12V LOAD" loading="lazy"></a><div><h3>12V LOAD <span class="src ecu">ECU 15</span></h3><p>The 12 V side: heated seats, lights, wipers, screens.</p></div></article>
+<article class="item s2" id="heating-and-12-v-batt-heat"><a class="shot" href="img/guide/value-battery_heat.png"><img src="img/guide/value-battery_heat.png" alt="PACK HEAT" loading="lazy"></a><div><h3>PACK HEAT <span class="src ecu">ECU 15</span></h3><p>Power going into warming the battery. Zero most of the time.</p></div></article>
+<article class="item s2" id="heating-and-12-v-heating-cost"><a class="shot" href="img/guide/value-heating_cost.png"><img src="img/guide/value-heating_cost.png" alt="HEATING COST" loading="lazy"></a><div><h3>HEATING COST <span class="src calc">Calculated</span></h3><p>About how much further the charge left would go with climate off, from the last ten minutes. High at the start while the cabin warms.</p><div class="uses"><a class="chip" href="#heating-and-12-v-climate">CLIMATE</a><a class="chip" href="#heating-and-12-v-aux-power">AUX LOAD</a><a class="chip" href="#battery-energy">ENERGY LEFT</a><a class="chip" href="#range-and-consumption-using">USING</a></div></div></article>
+<article class="item s2" id="heating-and-12-v-12v"><a class="shot" href="img/guide/value-aux.png"><img src="img/guide/value-aux.png" alt="12V BATT" loading="lazy"></a><div><h3>12V BATT <span class="src ecu">ECU 01</span></h3><p>The 12 V battery as the car measures it. About 14 V with the car on.</p></div></article>
+<article class="item s2" id="heating-and-12-v-outside"><a class="shot" href="img/guide/value-outside.png"><img src="img/guide/value-outside.png" alt="OUTSIDE" loading="lazy"></a><div><h3>OUTSIDE <span class="src ecu">ECU 60</span></h3><p>Outside air temperature, as the car reports it.</p></div></article>
+<article class="item s2" id="heating-and-12-v-charger"><a class="shot" href="img/guide/value-charger.png"><img src="img/guide/value-charger.png" alt="CHARGER TEMP" loading="lazy"></a><div><h3>CHARGER TEMP <span class="src ecu">ECU 15</span></h3><p>On-board charger temperature. Up to ~70 °C after a full-rate AC charge, cooling over an hour.</p></div></article>
+<article class="item s2" id="heating-and-12-v-cabin"><a class="shot" href="img/guide/value-cabin.png"><img src="img/guide/value-cabin.png" alt="CABIN" loading="lazy"></a><div><h3>CABIN <span class="src ecu">ECU 01</span></h3><p>Air temperature inside the car, as the battery&#x27;s controller reads it.</p></div></article></div>
+<h2 id="charging">Charging</h2>
+<div class="items"><article class="item s2" id="charging-mains"><a class="shot" href="img/guide/value-mains.png"><img src="img/guide/value-mains.png" alt="MAINS" loading="lazy"></a><div><h3>MAINS <span class="src ecu">ECU 15</span></h3><p>Voltage at the charging inlet: about 230 V on an AC charger, a dash with no mains connected. Shown here from an AC charge on 30 September.</p></div></article><article class="item s2" id="charging-evse-limit"><a class="shot" href="img/guide/value-evse_limit.png"><img src="img/guide/value-evse_limit.png" alt="STATION LIMIT" loading="lazy"></a><div><h3>STATION LIMIT <span class="src calc">Calculated</span></h3><p>The most current the charging station offers, read from its pilot signal. 8 A here, a low-current charger; a 32 A wallbox reads 32. A dash with no cable plugged in.</p><div class="uses"><span class="chip">pilot duty (ECU 15)</span></div></div></article></div>
+    </main>
+  </div>
+  </section>
+
+<section class="panel" id="screen-battery" data-page="page-battery" aria-label="Battery health">
+  <div class="guide screen">
+    <div class="phone-shots">
+      <a class="shot" href="img/guide/screen-battery.png"><img src="img/guide/screen-battery.png" alt="Battery health page, cell voltages" loading="lazy"></a>
+      <a class="shot" href="img/guide/screen-battery-capacity.png"><img src="img/guide/screen-battery-capacity.png" alt="Battery health page, cell capacity" loading="lazy"></a>
+    </div>
+    <main>
+      <h1 id="battery-page">Battery health</h1>
+      <p class="meta">Turn on <strong>Settings › Pages › Cell page</strong>; it opens from the battery in the top bar. Pictures: a real drive replayed.</p>
+      <p>Swipe one page right from the dashboard, or tap the battery in the top bar. Across the top are
+      <a class="chip" href="#battery-health">HEALTH</a>, the pack's voltage and temperature, and the highest cell, the
+      lowest cell and the gap between them, the same readings as the tiles. Under them are the six module temperatures,
+      then all 96 cells, then the pack's health over time.</p>
+      <h2 id="battery-page-cells">The cell grid</h2>
+      <p>Eight cells to a row, numbered from the top left. Three buttons under the grid switch what each cell shows.</p>
+      <ul>
+        <li><strong>VOLTS: which cell is highest and lowest right now.</strong> Blue is the lowest, red the highest, and
+        both change with the load. On a healthy pack all 96 are within a few millivolts of each other, so the colours
+        rank the cells; they do not judge them.</li>
+        <li><strong>MILLIOHMS: each cell's resistance, and this one is a verdict.</strong> Green is normal, under 10 %
+        above the middle of your own pack. Amber, 10 to 25 % above, is worth watching. Deep orange, 25 to 100 %, is a
+        warning. Red, resistance doubled, is the published end-of-life line for a cell. The button stays grey until the
+        current has moved by 20 A; a minute of ordinary driving with the page open does it, standing still never will.
+        The whole pack reads higher in the cold and lower when warm, so compare a cell with its neighbours today, not with
+        last week. Cells 9, 21, 33 and every twelfth after them can read high together while the current changes,
+        mostly in the cold. That comes from how the car measures them, so they are not flagged; one of them high on its
+        own still is.</li>
+        <li><strong>AH: what each cell holds, as the battery has learned it.</strong> Around 40 to 42 Ah a cell. The
+        smallest cell sets what the whole pack can hold. Up to a few percent between smallest and largest is normal: 0.7 % in
+        the picture. Compare the cells with each other rather than reading the number as the pack's
+        size; that is what <a class="chip" href="#battery-health">HEALTH</a> is for.</li>
+      </ul>
+      <aside class="callout" id="battery-page-relearn">
+        <h4>Every cell suddenly reads far less in AH</h4>
+        <p>Now and then, most often after a drive that takes the battery low, all 96 cells drop together, on one car
+        from about 41 Ah to 23 Ah, and stay there for a day or two before coming back on their own. The battery is re-learning
+        its cells. It is not a fault and HEALTH does not move with it. Wait until the figures have settled before
+        comparing cells.</p>
+      </aside>
+      <h2 id="battery-page-history">Health over time</h2>
+      <p>HEALTH is saved with each charge, and the line shows how it has stepped down. Under it, <strong>Measured
+      capacity</strong> is what your own charges put in, scaled to 0 to 100 % on the dash: the middle value of every
+      saved charge that covered at least 30 points and was read from start to finish. It is the part of the pack you can
+      drive on, so compare it with 28.5 kWh × HEALTH ÷ 100, not with the 35.5 kWh of the whole pack. Expect it a few
+      percent above that: a charge puts in a little more than driving takes back out. Until one charge
+      qualifies it says what it needs.</p>
+      <h2 id="battery-page-notes">While the page is open</h2>
+      <ul>
+        <li><strong>The dashboard may pause.</strong> All 96 cells come in one large reply, so with the drive log off
+        the other readings wait until you leave the page. With the drive log on, everything keeps updating and the cells
+        refresh less often instead. The Tyres page works the same way.</li>
+        <li><strong>You do not have to watch it.</strong> Whenever the cells are read, a cell crossing into a band
+        writes a line into the car log naming it, so a drive leaves a record with nobody looking.</li>
+        <li><strong>"Charge went while parked".</strong> If the charge fell more than 1.5 points while the car did not
+        move, the page says so once, at the top, until you dismiss it. Climate left on, a timer or an open door are
+        the usual causes; cold alone can move the gauge a point or two overnight. If it keeps happening with nothing
+        switched on, have the car looked at.</li>
+      </ul>
+    </main>
+  </div>
+</section>
+
+<section class="panel" id="screen-charging" data-page="page-charging" aria-label="Charging">
+  <div class="guide screen">
+    <div class="phone-shots">
+      <a class="shot" href="img/guide/screen-charging-live.png"><img src="img/guide/screen-charging-live.png" alt="Charging page during a charge" loading="lazy"></a>
+      <a class="shot" href="img/guide/screen-charging-history.png"><img src="img/guide/screen-charging-history.png" alt="Charging page after a charge, with saved charges" loading="lazy"></a>
+    </div>
+    <main>
+      <h1 id="charging-page">Charging</h1>
+      <p class="meta">Turn on <strong>Settings › Pages › Charging page</strong>; it opens from the bolt in the top bar. It
+      records every charge, open or not, and keeps the last one to look at afterwards. Pictures: invented data.</p>
+      <h2 id="charging-page-live">During a charge</h2>
+      <ul>
+        <li><strong>The ring</strong> is the charge on the dash's scale. Beside it: <strong>CONNECTOR</strong>, AC or DC as
+        the car reports it, <strong>POWER</strong> going into the battery, and <strong>ADDED</strong>, the kWh put in so far.</li>
+        <li><strong>VOLTAGE, CURRENT, AVERAGE</strong>: the pack's voltage, the charging current, and the kWh added
+        divided by the time so far.</li>
+        <li><strong>TIME TO 80 % and ENERGY TO 80 %</strong> (100 % once you are past 80) come from how fast the charge rose over the
+        last 5 minutes. For the first 2 minutes they say <em>estimating</em>. The energy is what the battery takes in;
+        on AC the charger bills about 7 % more.</li>
+        <li><strong>"The car is warming the battery"</strong>: part of the power is heating the pack, not filling it.
+        Nothing to do. <strong>"Cold pack"</strong>: the coldest module is at 10 °C or below, so expect a slower
+        charge until it warms.</li>
+        <li>Under the curve: <strong>CELL HIGH, CELL LOW, PACK TEMP</strong> and the six module temperatures, the
+        hottest in amber. A weak cell shows first during a charge, running higher than the rest as the pack fills.</li>
+      </ul>
+      <h2 id="charging-page-curve">The power curve</h2>
+      <p>Power into the battery against charge time, or against charge level with <strong>SOC</strong>. A solid line
+      is what the app read; a dashed line is a stretch where nobody was reading, filled in at an estimated power. A
+      dropout of up to 5 minutes, or an app restart, carries on the same charge. A longer gap, or a charge that
+      starts lower than the last one ended, starts a new one.</p>
+      <h2 id="charging-page-after">After a charge</h2>
+      <p>Not charging, the page shows the last charge and when it ended: <strong>DURATION</strong>, <strong>PEAK</strong>
+      and <strong>ADDED</strong>. With the car not connected it says it is not reading the car.</p>
+      <h2 id="charging-page-saved">Saved charges</h2>
+      <p>Turn on <strong>Settings › Pages › Save charging sessions</strong> and each charge is kept as its own file,
+      listed under the curve: when it ran, the charge from and to, minutes, kWh, average and peak kW. Tap one to draw
+      it on the curve, tap again to go back. <strong>Edit</strong> takes what the charger's receipt says; boxes left
+      empty keep their value or follow from the others. <strong>Share</strong> sends the file, <strong>Delete</strong>
+      removes it for good. <em>Includes estimated charging interval</em> means part of it was not read.</p>
+      <aside class="callout" id="charging-page-unfinished">
+        <h4>"Unfinished charge"</h4>
+        <p>The car finished charging while the adapter was asleep, so the log stops below where the car is now. If the
+        charger told you when it finished, its peak or the kWh, type them in and press <strong>Finish with this</strong>;
+        all three are optional. <strong>Discard</strong> deletes that charge's log.</p>
+      </aside>
+    </main>
+  </div>
+</section>
+
+<section class="panel" id="screen-tyres" data-page="page-tyres" aria-label="Tyres">
+  <div class="guide screen">
+    <div class="phone-shots">
+      <a class="shot" href="img/guide/screen-tyres.png"><img src="img/guide/screen-tyres.png" alt="Tyres page" loading="lazy"></a>
+    </div>
+    <main>
+      <h1 id="tyres-page">Tyres</h1>
+      <p class="meta">Turn on <strong>Settings › Pages › Tyres page</strong>; it opens from the tyre in the top bar and
+      takes effect on the next connection. Picture: a real drive replayed.</p>
+      <p>The Honda e has no pressure sensors. A tyre losing air rolls on a slightly smaller radius and turns faster
+      than the other three, and the car reports each wheel's speed. The page watches for that, the way the car's own
+      deflation warning does.</p>
+      <h2 id="tyres-page-start">Getting started</h2>
+      <ul>
+        <li><strong>Set all four tyres cold with a gauge</strong> to the pressures on the driver's door pillar, enter
+        them, and press <strong>These are set - start learning</strong>.</li>
+        <li><strong>Drive with the page open on the phone.</strong> It reads the wheels only while the page is on
+        screen, and not while a car screen is showing the dashboard. About ten minutes of steady driving between 30
+        and 130 km/h teaches it these tyres; the page shows how far it is, and a short drive carries on where the last
+        stopped.</li>
+        <li><strong>"Not counting right now"</strong> names why a moment is skipped: speed outside 30-130 km/h, hard
+        acceleration or regen, braking, or a corner.</li>
+        <li><strong>"No wheel speeds yet"</strong> after switching the page on: disconnect and connect once.</li>
+      </ul>
+      <h2 id="tyres-page-read">Reading it</h2>
+      <ul>
+        <li>Each tyre shows the pressure it would take to turn that fast, with a <strong>±</strong>: the real value is
+        inside it about 19 times in 20. Inside its ± it reads <strong>unchanged</strong>.</li>
+        <li><strong>Amber</strong> is 10 % down, <strong>red</strong> 20 % down. Go and check that tyre with a gauge.</li>
+        <li><strong>TREND, PER DRIVE</strong>: one point a drive for the last 60, the pressure you set dashed. A slow
+        leak is one line sinking while the other three stay level.</li>
+        <li><strong>After pumping the tyres</strong>, press <strong>I've set the pressures again</strong> and enter
+        them, so it learns them afresh.</li>
+      </ul>
+      <aside class="callout" id="tyres-page-limits">
+        <h4>What it cannot see</h4>
+        <p>All four going down together, since each tyre is compared with the others. It tells you to look, it is not a
+        gauge: check the pressures by hand now and then.</p>
+      </aside>
+    </main>
+  </div>
+</section>
+
+<section class="panel" id="screen-drive-log" data-page="page-drive-log" aria-label="Drive log">
+  <div class="guide screen">
+    <div class="phone-shots">
+      <a class="shot" href="img/guide/screen-drive-log.png"><img src="img/guide/screen-drive-log.png" alt="Drive log page" loading="lazy"></a>
+    </div>
+    <main>
+      <h1 id="drive-log-page">Drive log</h1>
+      <p class="meta">Turn on <strong>Settings › Pages › Drive log</strong> and allow location; it opens from the road
+      in the top bar. Picture: invented data.</p>
+      <p>Each drive is saved as a GPX file, written as you drive, so it is complete even if the app closes on the way.
+      A new file starts with each drive and after a charge; if the car or the adapter picks up again within five
+      minutes, the same file carries on.</p>
+      <h2 id="drive-log-page-list">The list</h2>
+      <ul>
+        <li><strong>By month</strong>, newest first, with the month's distance, energy, consumption and number of drives.</li>
+        <li><strong>Each drive</strong>: when it started and ended, how long it took, the distance and the average
+        speed, both including stops, as the car's trip meter does. Then the consumption, the energy that left the pack
+        and what regen put back.</li>
+        <li><strong>A dash</strong> means the drive cannot say: consumption needs at least a kilometre, and the
+        oldest drives have no used and regen figures.</li>
+        <li><strong>RECORDING</strong> marks the drive being written. It cannot be shared or deleted until it ends.</li>
+        <li><strong>Share</strong> sends the file to Drive, a mail or a map app; <strong>Delete</strong> removes it for
+        good.</li>
+      </ul>
+      <h2 id="drive-log-page-files">The files</h2>
+      <p>Each point carries the car's speed, power, current, pack voltage, the weakest cell's charge, energy used and
+      regenerated, consumption, road grade and altitude; a map app ignores all that and draws the route. <strong>Extended
+      driving data</strong> adds the dash's charge, odometer, temperatures, range, battery health and all 96 cell
+      voltages, about 10 MB an hour. Open a file in the <a href="https://morvy.github.io/gpx-log-player/" rel="noopener">GPX
+      Player</a> to replay it. Drives stay on the phone until you delete them, unless <em>Delete old logs from the
+      phone</em> is on in Settings.</p>
+    </main>
+  </div>
+</section>
+
+<section class="panel" id="screen-settings" data-page="page-settings" aria-label="Settings">
+  <div class="guide screen">
+    <div class="phone-shots">
+      <a class="shot" href="img/guide/screen-settings.png"><img src="img/guide/screen-settings.png" alt="Settings: adapter, units and file storage" loading="lazy"></a>
+      <a class="shot" href="img/guide/screen-settings-storage.png"><img src="img/guide/screen-settings-storage.png" alt="Settings: file storage, Google Drive, backup, screen and theme" loading="lazy"></a>
+      <a class="shot" href="img/guide/screen-settings-pages.png"><img src="img/guide/screen-settings-pages.png" alt="Settings: pages" loading="lazy"></a>
+      <a class="shot" href="img/guide/screen-settings-abrp.png"><img src="img/guide/screen-settings-abrp.png" alt="Settings: ABRP, vehicle and help" loading="lazy"></a>
+    </div>
+    <main>
+      <h1 id="settings-page">Settings</h1>
+      <p class="meta">The gear in the top bar, or the last page when swiping. Everything here is off until you turn it
+      on, unless it says otherwise.</p>
+
+      <aside class="callout" id="settings-first-time">
+        <h4>The first time</h4>
+        <ol>
+          <li>Plug the OBD adapter in under the dashboard and switch the car on.</li>
+          <li><strong>Adapter › Choose adapter</strong> and pick it from the list. Most adapters do not need pairing in
+          Android first.</li>
+          <li>Tap <strong>Not connected</strong> at the top left to connect.</li>
+          <li><strong>File storage › Choose folder</strong>, so drives and charges are kept where you can find them.</li>
+          <li>Turn on the pages you want under <strong>Pages</strong>.</li>
+        </ol>
+      </aside>
+
+      <h2 id="settings-connecting">Adapter and connecting</h2>
+      <p>The app reads the car through a Bluetooth OBD-II adapter (an ELM327 type) in the car's diagnostic socket.
+      <strong>Choose adapter</strong> lists adapters already paired with the phone (marked Classic SPP) and Bluetooth LE
+      adapters found nearby (marked BLE). Most BLE adapters never pair: pick them here, not in Android's Bluetooth
+      settings.</p>
+      <p>The dot at the top left shows the link; tap it to connect or disconnect.</p>
+      <table class="glossary">
+        <thead><tr><th>It says</th><th>What it means</th></tr></thead>
+        <tbody>
+          <tr><td>Connected</td><td>The car is answering and the readings are live.</td></tr>
+          <tr><td>Connecting</td><td>Setting up the adapter; a few seconds.</td></tr>
+          <tr><td>Car asleep</td><td>The adapter is connected but the car is not answering. A parked Honda e switches its
+          modules off within a minute; open a door or switch the car on.</td></tr>
+          <tr><td>Adapter out of reach</td><td>The phone cannot find the adapter: usually the car is off, or the phone is
+          too far away.</td></tr>
+          <tr><td>Not connected</td><td>Not trying. Tap it to connect.</td></tr>
+          <tr><td>Disconnected</td><td>The link failed. See below.</td></tr>
+        </tbody>
+      </table>
+      <ul>
+        <li><strong>Connect when the app opens</strong> connects every time you open the app, as if you had tapped it,
+        except after you pressed Disconnect, until the app is closed and opened again.</li>
+        <li><strong>Connect when the car does</strong> (Android 12 or newer) starts reading when the phone joins the
+        car's Bluetooth, with the app closed. Pair the phone with the car as for calls, press <strong>Link car</strong>,
+        pick the car as the phone's Bluetooth list names it and confirm. To have the route in the drive log on those
+        drives, press <strong>Allow location all the time</strong> and choose that. Reading stops ten minutes after
+        the car goes to sleep, so neither battery is drained overnight.</li>
+        <li><strong>The adapter talks to one app at a time.</strong> If Car Scanner, ABRP's own OBD link or the adapter's
+        app has it, this app gets nothing.</li>
+        <li><strong>It finds the adapter but never connects:</strong> unplug the adapter for about ten seconds and plug it
+        back in. Some adapters stop accepting anyone after a connection was cut off, while still showing up in the
+        list.</li>
+      </ul>
+
+      <h2 id="settings-units">Units</h2>
+      <p>Consumption in kWh/100km (the default), km/kWh, mi/kWh or kWh/100mi; the last two also switch distances and
+      speeds to miles. It applies everywhere, except a dashboard tile that has been given its own unit in the editor.</p>
+
+      <h2 id="settings-storage">File storage and Google Drive</h2>
+      <ul>
+        <li><strong>Choose folder</strong> picks a folder on the phone for drives (GPX) and saved charges. A file is
+        written privately while it is recorded, then copied into the folder and checked once it is finished. Without a
+        folder, logs stay in the app's private storage; you can still share them, but a file manager will not show
+        them. <strong>Open folder</strong> shows it, <strong>Move logs</strong> brings older private logs across.</li>
+        <li><strong>Upload logs to Google Drive</strong> copies every log in the folder to a "Honda e logs" folder in your
+        Drive, so they survive losing or resetting the phone. It needs the folder above. The app can see only the files
+        it puts there, nothing else in your Drive. <strong>Upload to Drive now</strong> sends whatever is waiting.</li>
+        <li><strong>Delete old logs from the phone</strong> removes drives and charges over 30 days old each time the app
+        starts. With Drive upload on, only once they are in Drive, which keeps its copies; with it off they are gone
+        for good.</li>
+      </ul>
+
+      <h2 id="settings-backup">Config backup</h2>
+      <p><strong>Export config</strong> saves the app's settings to a file; <strong>Import config</strong> reads one back,
+      checks it and asks before applying it. Use it when moving to a new phone or reinstalling.</p>
+      <ul>
+        <li><strong>In the file:</strong> dashboard layouts, theme, units, car colour, the pages and logs you turned on,
+        keep-screen-on, connect-when-the-app-opens, the ABRP settings and the vehicle information sheet.</li>
+        <li><strong>Not in it:</strong> the adapter, the linked car and the storage folder. Pick those again after
+        importing; after a reinstall, choose the folder first.</li>
+        <li><strong>Keep the file private.</strong> It holds your ABRP token and key and the car's VIN.</li>
+      </ul>
+
+      <h2 id="settings-screen-theme">Screen and theme</h2>
+      <ul>
+        <li><strong>Keep the screen on</strong> while the app is open. The phone will not sleep in a pocket either.</li>
+        <li><strong>Theme:</strong> Dark (the default), Light or Auto. Auto follows the phone's own light and dark
+        setting, and on the car's screen it follows the car, which knows when the headlamps are on.</li>
+      </ul>
+
+      <h2 id="settings-pages">Pages</h2>
+      <p>Each page adds an icon to the top bar and a stop when swiping, in this order.</p>
+      <ul>
+        <li><strong>Cell page</strong> (<a href="#page-battery">Battery health</a>). While it is open the battery is the only
+        thing asked for, so the dashboard's own readings pause, unless the car's screen is showing them.</li>
+        <li><strong>Charging page</strong> (<a href="#page-charging">Charging</a>). Costs nothing: it is built from readings
+        the app takes anyway.</li>
+        <li><strong>Save charging sessions</strong> keeps each charge as its own CSV file, listed on the Charging page.
+        Works with or without that page.</li>
+        <li><strong>Tyres page</strong> (<a href="#page-tyres">Tyres</a>). Reads the wheel speeds only while the page is
+        open; takes effect on the next connection.</li>
+        <li><strong>Drive log</strong> (<a href="#page-drive-log">Drive log</a>) records each drive as a GPX file. Needs
+        location allowed. <strong>Extended driving data</strong> adds the dash's charge, odometer, temperatures, range,
+        battery health and all 96 cell voltages to each point: about 10 MB an hour, from the next app start.</li>
+      </ul>
+
+      <h2 id="settings-abrp">ABRP</h2>
+      <p><a href="https://abetterrouteplanner.com" rel="noopener">A Better Route Planner</a> plans a trip with charging
+      stops from your car's charge and consumption. Normally it guesses them from its own model. With <strong>Send live
+      data</strong> on, this app feeds it the car's real readings, so the plan follows how the drive is actually
+      going.</p>
+      <ol>
+        <li>In ABRP, open your car's settings and copy its <strong>personal telemetry token</strong> (the generic or
+        "Other" live-data option).</li>
+        <li>Create a free <strong>telemetry API key</strong> at abetterrouteplanner.com/home/app/api-keys/telemetry.</li>
+        <li>Paste both into Settings › ABRP and turn <strong>Send live data</strong> on.</li>
+      </ol>
+      <p><strong>What is sent,</strong> every 5 seconds while the app is connected and the car is awake: charge, power,
+      speed, position, heading and altitude (when location is allowed), whether it is charging, AC or DC, parked or
+      driving, battery health and capacity, pack voltage and current, battery and outside temperature, and the
+      odometer. Only to ABRP, and only while the switch is on.</p>
+      <ul>
+        <li><strong>Is it working?</strong> The car log says whether ABRP accepted the data, and when it refuses, ABRP's
+        reason: a wrong token or a missing key.</li>
+        <li><strong>Use this or ABRP's own OBD connection, not both.</strong> The adapter talks to one app at a time.</li>
+      </ul>
+
+      <h2 id="settings-vehicle">Vehicle information</h2>
+      <p>The car's identity as its modules report it: the VIN, each module's part, software and serial numbers, and the
+      battery's health and capacity. Press <strong>Read from car</strong> once while connected; the sheet is kept
+      afterwards. <strong>Export as .txt</strong> saves all of it, for a dealer or your own records.
+      <strong>Export anonymised .txt</strong> keeps each module's software version and the VIN with the car's serial
+      starred out, enough to tell the model year but not the car: the one to post on a forum.</p>
+
+      <h2 id="settings-help">Help</h2>
+      <p><strong>Questions and answers</strong> is the in-app help. The <strong>?</strong> beside a page's title opens it
+      at that page's answer.</p>
+    </main>
+  </div>
+</section>
+    <dialog class="zoom" aria-label="Widget at full size"><form method="dialog"><button aria-label="Close">×</button></form><img alt=""></dialog>
+    <script>
+      const zoom = document.querySelector('dialog.zoom'), big = zoom.querySelector('img');
+      document.addEventListener('click', e => {
+        const a = e.target.closest('a.shot'); if (!a) return;
+        e.preventDefault(); big.src = a.href; big.alt = a.querySelector('img').alt; zoom.showModal();
+      });
+      zoom.addEventListener('click', () => zoom.close());
+    </script>
+    <script>
+      const panels = [...document.querySelectorAll('.panel')], tabs = [...document.querySelectorAll('.tabs a')];
+      function show() {
+        const id = decodeURIComponent(location.hash.slice(1)), target = id && (document.getElementById(id) || document.querySelector(`[data-page="${id}"]`));
+        const panel = (target && target.closest('.panel')) || panels[0];
+        panels.forEach(p => p.hidden = p !== panel);
+        tabs.forEach(a => a.setAttribute('aria-current', a.hash === '#' + panel.dataset.page ? 'page' : 'false'));
+        if (target && target !== panel) target.scrollIntoView(); else if (target) scrollTo(0, 0);
+      }
+      addEventListener('hashchange', show); addEventListener('load', show); show();
+    </script>
+
+  <aside class="callout disclaimer" role="note">
+    <h4>Decoded, not official</h4>
+    <p>Every reading in the app is decoded by the app itself from what the car sends, worked out from logs of
+    real drives and charges, not from Honda's documentation. A value can be off, mean something slightly
+    different from its label, or simply be wrong. Treat it as a guide: the car's own displays and warnings come
+    first, and anything that matters for safety or a repair is for a Honda dealer to check.</p>
+  </aside>
+
+  <footer>
+    <p>Honda e Dashboard is an independent app. It is not affiliated with, endorsed by or connected to Honda Motor Co., Ltd. "Honda e" is used only to say which car the app reads.</p>
+    <p>For information only. Don't operate your phone while driving.</p>
+    <p><a href="./">Home</a> · <a href="changelog.html">Changelog</a> · <a href="privacy.html">Privacy policy</a></p>
+  </footer>
+</div>
+</body>
+</html>

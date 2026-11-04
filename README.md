@@ -10,6 +10,14 @@ Honda e Dashboard is an independent app, not affiliated with Honda Motor Co., Lt
 
 ## Changelog
 
+### 1.8.0 - 5 November 2026
+
+Power tiles, the kW readout and Drive energy can show white numbers instead of colours: set it in the tile editor. Clearer tile names, such as CHARGER TEMP, WEAK CELL, DRAW LIMIT and ENERGY LEFT, and long names shrink to fit. The drive graph counts only driving time and holds the last 10 to 60 minutes, squeezing or cutting older driving. Vehicle information reads every module and exports an anonymised copy. MAINS shows a dash with nothing plugged in. The help now matches the screens.
+
+### 1.7.1 - 4 November 2026
+
+Six new tiles: cabin temperature, motor torque in N·m, the highest cell resistance, HV insulation, mains voltage at the charging inlet and the charging station's current limit.
+
 ### 1.7.0 - 4 November 2026
 
 New tiles show the power the battery will give and take back right now, so you can see why regen is weak when it is cold or full. The Battery page has an AH view with each cell's capacity. Logs now record power and regen available, cell and insulation resistance, DC/DC temperature, the charging station's current limit and motor torque in N·m. The app notices more reliably when the car is switched off. Drive energy shows dashes until it has counted. A 100-120 V socket charge shows as AC.
