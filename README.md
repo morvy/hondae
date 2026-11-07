@@ -10,6 +10,10 @@ Honda e Dashboard is an independent app, not affiliated with Honda Motor Co., Lt
 
 ## Changelog
 
+### 1.9.0 - 7 November 2026
+
+More Bluetooth adapters connect. Picking an adapter now also finds classic Bluetooth adapters that were never paired, such as the OBDLink MX+, MX and LX and vLinker BM, lists adapters above your other Bluetooth devices and pairs them for you. Adapters that refuse the usual connection are tried other ways, and an unknown BLE adapter is tested until it answers. A reading cut off mid-request can no longer show up as the next reading's value.
+
 ### 1.8.0 - 5 November 2026
 
 Power tiles, the kW readout and Drive energy can show white numbers instead of colours: set it in the tile editor. Clearer tile names, such as CHARGER TEMP, WEAK CELL, DRAW LIMIT and ENERGY LEFT, and long names shrink to fit. The drive graph counts only driving time and holds the last 10 to 60 minutes, squeezing or cutting older driving. Vehicle information reads every module and exports an anonymised copy. MAINS shows a dash with nothing plugged in. The help now matches the screens.
