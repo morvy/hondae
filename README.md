@@ -10,6 +10,10 @@ Honda e Dashboard is an independent app, not affiliated with Honda Motor Co., Lt
 
 ## Changelog
 
+### 2.0.2 - 13 November 2026
+
+Back in the car after a long park, the app connects at once, and a tap on "Adapter out of reach" tries again. Theme has a slider for the width of the tile border, from 0 to 6. Every page now starts at the top of the screen, with its title at the same height on each. On the regen and brakes tile, the size slider changes the figures only; the lamp names keep their size. The app's version is at the bottom of Settings again.
+
 ### 2.0.1 - 13 November 2026
 
 Unlocking the car no longer saves a few-second drive before the real one. Vehicle information has two tabs, Car and Modules: the service schedule and the speedometer are tables again, and Read and Export sit at the top. The regen and brakes tile can now be set in the tile designer: text size, weight, which text shows, each lamp's colour and where it lights. The tile designer has Cancel and Done, and Cancel puts the tile back as it was.
