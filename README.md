@@ -10,6 +10,14 @@ Honda e Dashboard is an independent app, not affiliated with Honda Motor Co., Lt
 
 ## Changelog
 
+### 2.0.1 - 13 November 2026
+
+Unlocking the car no longer saves a few-second drive before the real one. Vehicle information has two tabs, Car and Modules: the service schedule and the speedometer are tables again, and Read and Export sit at the top. The regen and brakes tile can now be set in the tile designer: text size, weight, which text shows, each lamp's colour and where it lights. The tile designer has Cancel and Done, and Cancel puts the tile back as it was.
+
+### 2.0.0 - 12 November 2026
+
+A new look: bottom navigation and redesigned Battery health (12 V tab, both battery lines), Charging, TPMS, Settings and Drive log, which exports My Honda+ trips. Design each tile's size, label, colours, limits and graphs; share your dashboard. New tiles for power use, regen and brakes, Single Pedal and drivetrain temperature; Cost of speed is gone. Optional My Honda page: Honda's cloud data, trips and paid remote commands. Fault codes, a maintenance minder, steadier readings and reconnects.
+
 ### 1.9.0 - 7 November 2026
 
 More Bluetooth adapters connect. Picking an adapter now also finds classic Bluetooth adapters that were never paired, such as the OBDLink MX+, MX and LX and vLinker BM, lists adapters above your other Bluetooth devices and pairs them for you. Adapters that refuse the usual connection are tried other ways, and an unknown BLE adapter is tested until it answers. A reading cut off mid-request can no longer show up as the next reading's value.

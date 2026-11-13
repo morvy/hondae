@@ -30,14 +30,14 @@
 
   <main class="doc">
     <h1>Privacy Policy</h1>
-    <p class="meta">Honda e Dashboard (Android, package <code>dev.moped.hondae</code>) · Effective 30 October 2026</p>
+    <p class="meta">Honda e Dashboard (Android, package <code>dev.moped.hondae</code>) · Effective 12 November 2026</p>
 
     <div class="summary">
       <ul>
         <li>No account, no ads, no analytics, no crash reporting, no tracking.</li>
         <li>The developer does not collect, receive or store any of your data. There is no developer server.</li>
         <li>Everything the app reads and records stays on your phone, in storage you control, unless you switch on upload to your own Google Drive.</li>
-        <li>The only data that leaves the phone is optional ABRP telemetry, sent only if you switch it on with your own ABRP token, optional log upload to your own Google Drive, or files you choose to share yourself.</li>
+        <li>The only data that leaves the phone is optional ABRP telemetry, sent only if you switch it on with your own ABRP token, optional log upload to your own Google Drive, the optional My Honda page, which signs in to Honda's own servers with your My Honda+ account, or files you choose to share yourself.</li>
       </ul>
     </div>
 
@@ -90,6 +90,12 @@
     <p>If you turn on <em>Upload logs to Google Drive</em> in <em>Settings → File storage</em> and allow it with your Google account, the app copies every log in your chosen folder, including drive routes with your location, to a folder called "Honda e logs" in your own Google Drive, over an encrypted HTTPS connection to Google's Drive service (<code>googleapis.com</code>).</p>
     <p>The app asks only for access to the files it creates itself, so it cannot see anything else in your Drive. The upload goes directly from your phone to your Google account; the developer never receives it or has any access to your Drive. The files are governed by your Google account's terms and <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a>. Switch the feature off to stop uploading, and revoke access at any time in your Google account's security settings.</p>
 
+    <h2>My Honda page — optional, off by default</h2>
+    <p>If you switch on the <em>My Honda</em> page in <em>Settings → Pages</em> and sign in with your My Honda+ account, the app talks directly to Honda's Connect Europe servers (<code>mobile-api.connected.honda-eu.com</code>) over an encrypted HTTPS connection, the same servers the My Honda+ app uses. Your e-mail and password are sent to Honda, encrypted, to sign in; the password is never stored. The app then keeps the sign-in tokens and a device key Honda knows this phone by, encrypted with a key held in the Android Keystore, and your e-mail address and the last car status it read, including where the car is parked. All of it stays in the app's private storage, excluded from backups. Each month of trips you open on its Trips tab is kept too, once the month is over, so it can still be seen after Honda stops showing it: as a file in the log folder you chose, beside your drive logs, where it stays after the app is removed (or in the app's private storage if no folder is chosen). It holds each trip's times, distance, speeds and consumption, not where it went.</p>
+    <p>What the app reads from Honda: your car's list and plan, its last reported status (charge, range, charging, locks, doors, windows, lights, cabin temperature, warning lamps, odometer and its parked location), Honda's trip history and the schedules. It reads them when you open or pull down the page, and in the background only if you turn on the paid features' automatic refresh or charge watching. With paid features on, it sends a remote command (lock, unlock, climate, charging, horn and lights, charge limits, schedules, a request for fresh data) only when you press and hold its button or save a change.</p>
+    <p>The card that shows where the car is parked loads its map from OpenFreeMap (<code>tiles.openfreemap.org</code>), so the map tiles it asks for tell OpenFreeMap roughly where the car is; nothing else is sent to it, and it has no account or cookies. It is loaded only while that card is on screen. See <a href="https://openfreemap.org/privacy/" rel="noopener">OpenFreeMap's privacy policy</a>.</p>
+    <p>This data goes between your phone and Honda only; the developer never receives it. It is governed by Honda's own My Honda+ terms and privacy policy. Switching the page off signs the app out and deletes everything it kept, except the trip months in your log folder, which you delete like any other log file.</p>
+
     <h2>Sharing</h2>
     <p>The app does not share, sell or transfer your data to anyone. Apart from the optional features above, a log file only leaves your phone when you tap <em>Share</em> and pick where it goes using Android's share sheet; what happens then depends on the app you choose.</p>
 
@@ -100,7 +106,7 @@
     <p>Data stays on your phone until you delete it, or until the optional <em>Delete old logs from the phone</em> switch removes logs over 30 days old from your folder. The app never deletes anything from Google Drive; delete those files in Drive. Delete individual drives or charges in the app, delete the files from your chosen folder, or clear the app's storage. Uninstalling the app removes its private storage and settings; files in the folder you chose stay there until you delete them. Since the developer holds no data about you, there is nothing to request or delete on our side.</p>
 
     <h2>Security</h2>
-    <p>Data in the app's private storage is protected by Android's app sandbox. The ABRP connection uses HTTPS. The app only reads from the car; it never writes to it or changes any of its settings.</p>
+    <p>Data in the app's private storage is protected by Android's app sandbox. The ABRP connection uses HTTPS. The app only reads from the car over the adapter; it never writes to it or changes any of its settings that way. The only changes it can make go through Honda's servers, from the My Honda page, when you ask for them.</p>
 
     <h2>Children</h2>
     <p>The app is meant for drivers of a Honda e and is not directed at children. It does not knowingly collect any data from anyone, children included.</p>
