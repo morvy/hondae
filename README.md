@@ -10,6 +10,10 @@ Honda e Dashboard is an independent app, not affiliated with Honda Motor Co., Lt
 
 ## Changelog
 
+### 2.0.3 - 14 November 2026
+
+Settings has a minimum row height for the dashboard, one for portrait and one for landscape. Rows are no longer squeezed below it: a longer layout scrolls, with whole rows filling the screen. At 100 % six tile rows fit in portrait and three in landscape, whatever the column count; lower values fit more rows, higher ones make them taller. On the Tyres page the chip now reads "Brake fluid level OK", because the car reports only the level.
+
 ### 2.0.2 - 13 November 2026
 
 Back in the car after a long park, the app connects at once, and a tap on "Adapter out of reach" tries again. Theme has a slider for the width of the tile border, from 0 to 6. Every page now starts at the top of the screen, with its title at the same height on each. On the regen and brakes tile, the size slider changes the figures only; the lamp names keep their size. The app's version is at the bottom of Settings again.
