@@ -10,6 +10,10 @@ Honda e Dashboard is an independent app, not affiliated with Honda Motor Co., Lt
 
 ## Changelog
 
+### 2.1.0 - 15 November 2026
+
+New dashboard tiles: COOLANT (the battery loop, with the drive unit's coolant, fan and pump on a larger tile), TEMPERATURES (six temperatures in one strip) and 12V SOC (the 12 V battery sensor's charge, temperature, current and voltage, as rows or columns), plus twelve figures that were only inside widgets, such as regen power, radiator fan, energy used this drive, magnet and gear oil temperature. One list, grouped by topic, adds a tile or changes one from the tile designer; the power bar, kW readout, load, drive graph and next speed are now value tiles with their drawing. Graphs can sit above, below, left or right of the value or replace it, in plain, stepped or colour-scale bars, and the unit can go beside, under, at the bottom or be hidden. Drivetrain, coolant, 12 V and power use tiles take the label, size, colours and limits, with their own row size and weight. Range gets a range curve and a range bar. The 12 V tab shows the car's own battery sensor, Battery health the capacities the BMS has stored, Vehicle information lifetime counts, fault codes every module, and a DC charge the energy from the station and the loss. The app connects at once after parking and notices a sleeping car wake sooner. The Single Pedal tile is removed for now.
+
 ### 2.0.3 - 14 November 2026
 
 Settings has a minimum row height for the dashboard, one for portrait and one for landscape. Rows are no longer squeezed below it: a longer layout scrolls, with whole rows filling the screen. At 100 % six tile rows fit in portrait and three in landscape, whatever the column count; lower values fit more rows, higher ones make them taller. On the Tyres page the chip now reads "Brake fluid level OK", because the car reports only the level.
