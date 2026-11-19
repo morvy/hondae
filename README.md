@@ -10,6 +10,10 @@ Honda e Dashboard is an independent app, not affiliated with Honda Motor Co., Lt
 
 ## Changelog
 
+### 2.3.0 - 19 November 2026
+
+USING can now show the car's own instant consumption, the figure its dashboard gauge shows, or power over speed right now, and a wide USING tile shows both with the trip and since-charge figures. The power bar has a new Stages colour in the tile designer that paints it by what you are doing: teal braking, green regen, then by the accelerator from eco to hard. The power bar can also sit below the number, stand upright beside it or fill the tile.
+
 ### 2.2.1 - 18 November 2026
 
 The TPMS page now learns and watches your tyres while Android Auto shows the dashboard or the phone is in a pocket, not only with the page open on the phone. Once you have entered the pressures, it reads the wheel speeds in the background above 30 km/h; learning takes about ten minutes of steady driving that way, or two with the page open.

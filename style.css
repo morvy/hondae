@@ -199,3 +199,18 @@ a.chip:hover { color: var(--text); border-color: var(--accent); }
 .rates th { text-align: left; white-space: nowrap; vertical-align: top; color: var(--text); padding: 4px 16px 4px 0; font-weight: 600; }
 .rates td { color: var(--muted); padding: 4px 0; border-bottom: 1px solid var(--line); }
 @media (max-width: 600px) { .rates th, .rates td { display: block; padding: 2px 0; } .rates th { padding-top: 8px; } }
+/* A page told in steps (the Tile designer): each screenshot beside the text that explains it. */
+.guide.steps { grid-template-columns: minmax(0, 1fr); max-width: 980px; }
+.step { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 32px; align-items: start; padding: 28px 0; border-top: 1px solid var(--line); scroll-margin-top: 16px; }
+.step .shot { display: block; line-height: 0; }
+.step .shot img { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 18px; }
+.guide .step h2 { margin-top: 0; border: 0; padding: 0; }
+.step ul { color: var(--muted); font-size: 15px; line-height: 1.55; padding-left: 18px; margin: 8px 0 0; }
+.step li { margin-bottom: 8px; }
+.step li strong { color: var(--text); }
+@media (max-width: 720px) {
+  .step { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .step > div { display: contents; }   /* heading, then the picture, then the text */
+  .guide .step h2 { order: -1; }
+  .step .shot { max-width: 260px; }
+}
