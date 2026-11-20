@@ -10,6 +10,10 @@ Honda e Dashboard is an independent app, not affiliated with Honda Motor Co., Lt
 
 ## Changelog
 
+### 2.3.1 - 20 November 2026
+
+ALTITUDE now shows the height above sea level on Android 13 and older too, where it read about 40-45 m high.
+
 ### 2.3.0 - 19 November 2026
 
 USING can now show the car's own instant consumption, the figure its dashboard gauge shows, or power over speed right now, and a wide USING tile shows both with the trip and since-charge figures. The power bar has a new Stages colour in the tile designer that paints it by what you are doing: teal braking, green regen, then by the accelerator from eco to hard. The power bar can also sit below the number, stand upright beside it or fill the tile.
