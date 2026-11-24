@@ -10,6 +10,10 @@ Honda e Dashboard is an independent app, not affiliated with Honda Motor Co., Lt
 
 ## Changelog
 
+### 2.4.0 - 24 November 2026
+
+New Group tile: several readings in one card, as a grid, a row or a label/value table, each as text or a small graph. Tiles can now be one row high, on one line or with the label on the left, and the car screen scrolls when they don't all fit. Every tile's Text tab now works: hide the label, put the unit by the label or the number, pick the layout. The Drive log shows what heating a cold pack took on each drive. The min/avg/max line follows its switch again.
+
 ### 2.3.2 - 24 November 2026
 
 A charge continued after the car went quiet stays whole and ends when you unplug. An AC charge that ended while the car slept is saved on its own. Edit a saved charge's end SoC and the charger's energy; loss follows. Typed charge figures survive switching apps, and LOSS shows 0 instead of vanishing. No false cell warnings after DC charges, parked loss ignores the gauge settling, a charge's L/R share covers all of it, and plugging in no longer splits the route.
