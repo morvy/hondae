@@ -10,6 +10,10 @@ Honda e Dashboard is an independent app, not affiliated with Honda Motor Co., Lt
 
 ## Changelog
 
+### 2.4.1 - 24 November 2026
+
+New REGEN % tile: how much of the motor's regen you use, turning teal with a brake icon when the friction brakes take over. Graphs now glide smoothly at the pace their readings arrive instead of jumping. One-row tiles can show just a graph, or a bar beside the number. Raw logs also keep the phone's speed, distance and road grade, never where you are.
+
 ### 2.4.0 - 24 November 2026
 
 New Group tile: several readings in one card, as a grid, a row or a label/value table, each as text or a small graph. Tiles can now be one row high, on one line or with the label on the left, and the car screen scrolls when they don't all fit. Every tile's Text tab now works: hide the label, put the unit by the label or the number, pick the layout. The Drive log shows what heating a cold pack took on each drive. The min/avg/max line follows its switch again.
