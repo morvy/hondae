@@ -10,6 +10,10 @@ Honda e Dashboard is an independent app, not affiliated with Honda Motor Co., Lt
 
 ## Changelog
 
+### 2.3.2 - 24 November 2026
+
+A charge continued after the car went quiet stays whole and ends when you unplug. An AC charge that ended while the car slept is saved on its own. Edit a saved charge's end SoC and the charger's energy; loss follows. Typed charge figures survive switching apps, and LOSS shows 0 instead of vanishing. No false cell warnings after DC charges, parked loss ignores the gauge settling, a charge's L/R share covers all of it, and plugging in no longer splits the route.
+
 ### 2.3.1 - 20 November 2026
 
 ALTITUDE now shows the height above sea level on Android 13 and older too, where it read about 40-45 m high.
