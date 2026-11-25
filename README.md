@@ -10,6 +10,10 @@ Honda e Dashboard is an independent app, not affiliated with Honda Motor Co., Lt
 
 ## Changelog
 
+### 2.4.2 - 26 November 2026
+
+The Android Auto dashboard keeps updating when it starts with the phone locked. The hill split, Stages and the GRADE tile now read the road's grade from the car itself, no phone barometer or GPS needed. Tiles with a vertical bar can be one cell wide. Groups get their own colours, and a Row fits up to six readings. Graphs can have their own colour, Steps included. Bars keep one thickness on tall tiles.
+
 ### 2.4.1 - 24 November 2026
 
 New REGEN % tile: how much of the motor's regen you use, turning teal with a brake icon when the friction brakes take over. Graphs now glide smoothly at the pace their readings arrive instead of jumping. One-row tiles can show just a graph, or a bar beside the number. Raw logs also keep the phone's speed, distance and road grade, never where you are.
