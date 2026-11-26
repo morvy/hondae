@@ -10,6 +10,10 @@ Honda e Dashboard is an independent app, not affiliated with Honda Motor Co., Lt
 
 ## Changelog
 
+### 2.4.4 - 26 November 2026
+
+The Android Auto dashboard now notices when it stops updating and redraws itself. A horizontal bar can fill its tile instead of staying slim, and a graph tile's number can be turned off, so a tile can be the bar alone. Drive energy can hide its names, numbers or unit, put the names beside the numbers, turn its strip off or fill the tile with it, take its own colours, and fit one row. Steps graphs draw in the colour the designer shows.
+
 ### 2.4.3 - 26 November 2026
 
 On a cold day the Battery page explains why BMS usable capacity reads low: a cold battery lowers it, and that is not wear. The cell resistance history compares days of a like temperature in winter, so a colder day no longer looks like a worn battery. If your adapter cannot read the battery's long replies, the app now says so under the top bar and names adapters that can.
