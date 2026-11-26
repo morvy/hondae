@@ -10,6 +10,10 @@ Honda e Dashboard is an independent app, not affiliated with Honda Motor Co., Lt
 
 ## Changelog
 
+### 2.4.3 - 26 November 2026
+
+On a cold day the Battery page explains why BMS usable capacity reads low: a cold battery lowers it, and that is not wear. The cell resistance history compares days of a like temperature in winter, so a colder day no longer looks like a worn battery. If your adapter cannot read the battery's long replies, the app now says so under the top bar and names adapters that can.
+
 ### 2.4.2 - 26 November 2026
 
 The Android Auto dashboard keeps updating when it starts with the phone locked. The hill split, Stages and the GRADE tile now read the road's grade from the car itself, no phone barometer or GPS needed. Tiles with a vertical bar can be one cell wide. Groups get their own colours, and a Row fits up to six readings. Graphs can have their own colour, Steps included. Bars keep one thickness on tall tiles.
