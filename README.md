@@ -10,6 +10,10 @@ Honda e Dashboard is an independent app, not affiliated with Honda Motor Co., Lt
 
 ## Changelog
 
+### 2.4.5 - 27 November 2026
+
+A frozen Android Auto dashboard is now caught and redrawn within a few seconds instead of about fifteen. Outside and cabin temperature no longer show a false value while the car wakes up, the battery shows as heating only while its heater draws power, and the 12 V discharge over the last park is named for what it measures.
+
 ### 2.4.4 - 26 November 2026
 
 The Android Auto dashboard now notices when it stops updating and redraws itself. A horizontal bar can fill its tile instead of staying slim, and a graph tile's number can be turned off, so a tile can be the bar alone. Drive energy can hide its names, numbers or unit, put the names beside the numbers, turn its strip off or fill the tile with it, take its own colours, and fit one row. Steps graphs draw in the colour the designer shows.
